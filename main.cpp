@@ -3,29 +3,17 @@
 int main()
 {
 
-    OperatingInstructionForUser();      //Выводим на экран для пользователя инструкцию по использованию программы
+    OperatingInstructionForUser();      //Show the user the instructions for using the program
 
-    SquareTrinomial UsersTrinomial;     //Уравнение пользователя, которое требуется решить
+    SquareTrinomial UsersTrinomial;     //The User's equation which need to solve
 
-    bool IsItSquareEquation = InputSquareTrinomialCF(&UsersTrinomial);     //Чтение коэффицентов многочлена
+    InputSquareTrinomialCF(&UsersTrinomial);     //Read the coefficients of polynomial
 
-    if(IsItSquareEquation) {
+    EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial);    //Solve the square equation and calculate the number of roots
 
-        EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial);     //Решение квадратного уравнения и вычисление количества корней
+    OutputResult(CountOfRoots, UsersTrinomial);    //Print the result of program
 
-        OutputResultOfSqrTrinom(CountOfRoots, UsersTrinomial);      //Вывод результата программы
-
-    } else {
-
-        LinearBinomial UsersBinomial; //Линейное уравнение пользователя
-
-        TransformTrinomial2Binomial(UsersTrinomial, &UsersBinomial); //Превращаем Трёхчлен в двухчлен
-
-        EquationRootsQuantity CountOfRoots = SolveLinearEquation(&UsersBinomial); //Решение линенйного уравнение
-
-        OutputResultOfLinBinom(CountOfRoots, UsersBinomial);  //Вывод результат программы
-
-    }
+    //GroupOfTests();
 
     return 0;
 
