@@ -9,13 +9,14 @@
 #include <TXLib.h>
 
 const int OUTPUT_PRECISION = 6;
+const double EPS = 1e-7;
 
 
 
 enum EquationRootsQuantity {
 
     INFINITE_ROOTS_QUANTITY = -1,
-    NO_ROOTS,
+    NO_ROOTS, // TODO: give a number to all of your elements
     ONE_ROOT,
     TWO_ROOTS
 
@@ -26,38 +27,37 @@ struct SquareTrinomial {
     double senior_cf = NAN;     //senior coefficient of polynomial
     double second_cf = NAN;     //second coefficient of polynomial
     double free_term = NAN;     //free term of polynomial
-    double root1 = NAN;         //root #1 of polynomial
-    double root2 = NAN;         //root #2 of polynomial
 
 };
 
+struct RootsOfTrinomial {
 
+    double first = NAN;     //first root of equation
+    double second = NAN;    //second root of equation
 
-void OperatingInstructionForUser();
+};
 
-void InputSquareTrinomialCF(SquareTrinomial *UsersTrinomial);
+void ShowInstructionForUser();
 
-EquationRootsQuantity SolveSquareEquation(SquareTrinomial *UsersTrinomial);
+void ReadSquareTrinomial(SquareTrinomial *UsersTrinomial);
 
-EquationRootsQuantity SolveLinearEquation(SquareTrinomial *UsersTrinomial);
+EquationRootsQuantity SolveSquareEquation(SquareTrinomial *UsersTrinomial, RootsOfTrinomial *Root);
 
-void OutputResult(EquationRootsQuantity CountOfRoots, SquareTrinomial UsersTrinomial);
+EquationRootsQuantity SolveLinearEquation(SquareTrinomial *UsersTrinomial, RootsOfTrinomial *Root);
+
+void PrintResult(EquationRootsQuantity CountOfRoots, RootsOfTrinomial Root);
 
 bool CompareDouble(double number1, double number2);
 
 double GetInput(char name_of_CF[], char symbol);
 
-void AssertSquareTrinomial(SquareTrinomial InterestingTrinom);
+void MakeMinRoot1AndMaxRoot2(RootsOfTrinomial *Root);
 
-void AssertPtrSquareTrinomial(SquareTrinomial *InterestingTrinom);
-
-void AssertDouble(double number);
-
-void MakeMinRoot1AndMaxRoot2(SquareTrinomial *UsersTrinomial);
-
-int CheckCorrectnessOfSolve(SquareTrinomial *CorrectTrinomial, EquationRootsQuantity CorrectNumberOfRoots);
+int CheckCorrectnessOfSolve(SquareTrinomial *CorrectTrinomial, EquationRootsQuantity CorrectNumberOfRoots, RootsOfTrinomial *CorrectRoots);
 
 void GroupOfTests();
+
+bool IsZero(double number);
 
 
 #endif // SOLVESQUAREEQUATION_H_INCLUDED

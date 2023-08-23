@@ -1,17 +1,23 @@
+//=========================================================================================================
+//!
+//!
+//=========================================================================================================
+
 #include "SolveSquareEquation.h"
 
 int main()
 {
-
-    OperatingInstructionForUser();      //Show the user the instructions for using the program
+    ShowInstructionForUser();      //Show the user the instructions for using the program
 
     SquareTrinomial UsersTrinomial;     //The User's equation which need to solve
 
-    InputSquareTrinomialCF(&UsersTrinomial);     //Read the coefficients of polynomial
+    RootsOfTrinomial RootsOfUsersTrinomial;
 
-    EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial);    //Solve the square equation and calculate the number of roots
+    ReadSquareTrinomial(&UsersTrinomial);     //Read the coefficients of polynomial
 
-    OutputResult(CountOfRoots, UsersTrinomial);    //Print the result of program
+    EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial, &RootsOfUsersTrinomial);    //Solve the square equation and calculate the number of roots
+
+    PrintResult(CountOfRoots, RootsOfUsersTrinomial);    //Print the result of program
 
     //GroupOfTests();
 
