@@ -1,32 +1,36 @@
-#include "SolveSquareEquation.h"
+#include "main.h"
 
-int main()
+int main(int argc, const char* argv[])
 {
+    bool flag = CheckIfTestNeedToDo(argc, argv);
 
-    OperatingInstructionForUser();      //Выводим на экран для пользователя инструкцию по использованию программы
+    if (flag == false)
+    {
+        ShowInstructionForUser();      //Show the user the instructions for using the program
 
-    SquareTrinomial UsersTrinomial;     //Уравнение пользователя, которое требуется решить
+        SquareTrinomialCoef UsersTrinomial;     //The User's equation which need to solve
 
-    bool IsItSquareEquation = InputSquareTrinomialCF(&UsersTrinomial);     //Чтение коэффицентов многочлена
+        RootsOfTrinomial RootsOfUsersTrinomial; //The roots of SquareTrinomial
 
-    if(IsItSquareEquation) {
+        ReadSquareTrinomial(&UsersTrinomial);     //Read the coefficients of polynomial
 
-        EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial);     //Решение квадратного уравнения и вычисление количества корней
+        EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial, &RootsOfUsersTrinomial);    //Solve the square equation and calculate the number of roots
 
-        OutputResultOfSqrTrinom(CountOfRoots, UsersTrinomial);      //Вывод результата программы
-
-    } else {
-
-        LinearBinomial UsersBinomial; //Линейное уравнение пользователя
-
-        TransformTrinomial2Binomial(UsersTrinomial, &UsersBinomial); //Превращаем Трёхчлен в двухчлен
-
-        EquationRootsQuantity CountOfRoots = SolveLinearEquation(&UsersBinomial); //Решение линенйного уравнение
-
-        OutputResultOfLinBinom(CountOfRoots, UsersBinomial);  //Вывод результат программы
-
+        PrintResult(CountOfRoots, RootsOfUsersTrinomial);    //Print the result of program
+    }
+    else
+    {
+        RunTests();
     }
 
     return 0;
+}
 
+bool CheckIfTestNeedToDo(int argc, const char* argv[])
+{
+    if (argc == 1)
+    {
+        return false;
+    }
+    return (!strcmp(argv[1], unittest));
 }
