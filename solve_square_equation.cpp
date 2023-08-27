@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 #include "SolveSquareEquation.h"
 
 EquationRootsQuantity SolveSquareEquation(SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root) //TODO: убрать *
+=======
+#include "solve_square_equation.h"
+
+EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root) //TODO: убрать *
+>>>>>>> Stashed changes
 {
     assert((UsersTrinomial != nullptr) && "Pointer to Polynomial is nullptr!!!");
 
@@ -12,6 +18,7 @@ EquationRootsQuantity SolveSquareEquation(SquareTrinomialCoef *UsersTrinomial, R
     assert((isfinite(UsersTrinomial->second_cf)) && "Second coefficient = INF!!!");
     assert((isfinite(UsersTrinomial->free_term)) && "Free term = INF!!!");
 
+<<<<<<< Updated upstream
     if (IsZero(UsersTrinomial->senior_cf))
     {
         return SolveLinearEquation(UsersTrinomial, Root);
@@ -53,6 +60,39 @@ EquationRootsQuantity SolveSquareEquation(SquareTrinomialCoef *UsersTrinomial, R
 }
 
 EquationRootsQuantity SolveLinearEquation(SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root) //Убрать *
+=======
+    if (IsZero(UsersTrinomial->senior_cf)) {
+        return SolveLinearEquation(UsersTrinomial, Root);
+    }
+    double Discriminant = UsersTrinomial->second_cf * UsersTrinomial->second_cf - 4 *
+                          UsersTrinomial->senior_cf * UsersTrinomial->free_term;
+
+     assert((isnan(Discriminant) == false) && "Oops, Discriminant is NAN!!!");
+     assert((isfinite(Discriminant)) && "Oops, Discriminant is very big! D = INF!!!");
+
+    if (IsZero(Discriminant)) {
+        Root->first = -UsersTrinomial->second_cf / (2 * UsersTrinomial->senior_cf);
+        Root->first = (IsZero(Root->first)) ? 0.0 : Root->first;
+
+        return ONE_ROOT;
+    }
+    else if (Discriminant >= EPS) {//Discriminant > 0
+        double sqrt_Disc = sqrt(Discriminant);
+
+        Root->first = (-(UsersTrinomial->second_cf) - sqrt_Disc) / (2 * UsersTrinomial->senior_cf);
+        Root->second = (-(UsersTrinomial->second_cf) + sqrt_Disc) / (2 * UsersTrinomial->senior_cf);
+
+        Root->first = (IsZero(Root->first)) ? 0.0 : Root->first;
+        Root->second = (IsZero(Root->second)) ? 0.0 : Root->second;
+
+        SortRoots(Root);
+        return TWO_ROOTS;
+    }
+    return NO_ROOTS; //Discriminant < 0
+}
+
+EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root) //Убрать *
+>>>>>>> Stashed changes
 {
     assert((UsersTrinomial != nullptr) && "Pointer to Polynomial is nullptr!!!");
 
@@ -65,10 +105,15 @@ EquationRootsQuantity SolveLinearEquation(SquareTrinomialCoef *UsersTrinomial, R
     assert((isfinite(UsersTrinomial->free_term)) && "Free term = INF!!!");
 
 
+<<<<<<< Updated upstream
     if (IsZero(UsersTrinomial->second_cf))
     {
         if(IsZero(UsersTrinomial->free_term))
         {
+=======
+    if (IsZero(UsersTrinomial->second_cf)) {
+        if(IsZero(UsersTrinomial->free_term)) {
+>>>>>>> Stashed changes
             return INFINITE_ROOTS_QUANTITY;
         }
         return NO_ROOTS;
@@ -79,16 +124,25 @@ EquationRootsQuantity SolveLinearEquation(SquareTrinomialCoef *UsersTrinomial, R
     return ONE_ROOT;
 }
 
+<<<<<<< Updated upstream
 void MakeMinRoot1AndMaxRoot2(RootsOfTrinomial *Root)
 {
 
     if (Root->second < Root->first)
     {
+=======
+void SortRoots(RootsOfTrinomial *Root)
+{
+    if (Root->second < Root->first) {
+>>>>>>> Stashed changes
         double temp = NAN;
         temp = Root->second;
         Root->second = Root->first;
         Root->first = temp;
     }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 }
 

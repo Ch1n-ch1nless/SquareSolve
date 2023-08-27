@@ -1,0 +1,104 @@
+\hypertarget{test_8h}{}\doxysection{test.\+h File Reference}
+\label{test_8h}\index{test.h@{test.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$TXLib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_8h_ab6f8c7ee7804321cf5d9c491f28eaf8a}{Check\+Correctness\+Of\+Solve}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Correct\+Trinomial, Equation\+Roots\+Quantity Correct\+Number\+Of\+Roots, const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$Correct\+Roots)
+\begin{DoxyCompactList}\small\item\em check the correctness of the Solve\+Square\+Equation() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test_8h_a21c1d6ea845542c163758f660dcc928d}\label{test_8h_a21c1d6ea845542c163758f660dcc928d}} 
+void \mbox{\hyperlink{test_8h_a21c1d6ea845542c163758f660dcc928d}{Run\+Tests}} (const char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em runs tests \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8h_a1d88912033f064d13c3ce97cdc3c0d65}{Read\+Correct\+Sqr\+Trinomial}} (\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Ref\+Trinomial, Equation\+Roots\+Quantity $\ast$Correct\+Number\+Of\+Roots, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$Ref\+Roots, FILE $\ast$ptr\+\_\+to\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Read from file coefficients of square trinomial and its roots. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{test_8h_a7f0f567942854d35204a646c9e855e11}{Read\+Number}} (FILE $\ast$ptr\+\_\+to\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Read the number from file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8h_a6012eeab2352532ca8e313d21d4f913e}{Print\+Equation}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Correct\+Trinomial)
+\begin{DoxyCompactList}\small\item\em print square equation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test_8h_a7a6e478e2a99121b28c9629bf4711262}\label{test_8h_a7a6e478e2a99121b28c9629bf4711262}} 
+const int \mbox{\hyperlink{test_8h_a7a6e478e2a99121b28c9629bf4711262}{NUMBER\+\_\+\+OF\+\_\+\+TESTS}} = 10
+\begin{DoxyCompactList}\small\item\em Number of tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8h_ab6f8c7ee7804321cf5d9c491f28eaf8a}\label{test_8h_ab6f8c7ee7804321cf5d9c491f28eaf8a}} 
+\index{test.h@{test.h}!CheckCorrectnessOfSolve@{CheckCorrectnessOfSolve}}
+\index{CheckCorrectnessOfSolve@{CheckCorrectnessOfSolve}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{CheckCorrectnessOfSolve()}{CheckCorrectnessOfSolve()}}
+{\footnotesize\ttfamily int Check\+Correctness\+Of\+Solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Correct\+Trinomial,  }\item[{Equation\+Roots\+Quantity}]{Correct\+Number\+Of\+Roots,  }\item[{const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{Correct\+Roots }\end{DoxyParamCaption})}
+
+
+
+check the correctness of the Solve\+Square\+Equation() 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Correct\+Trinomial} & -\/ structure in which coefficient values are found \\
+\hline
+\mbox{\texttt{ in}}  & {\em Correct\+Number\+Of\+Roots} & -\/ correct root number \\
+\hline
+\mbox{\texttt{ in}}  & {\em Correct\+Roots} & -\/ structure in which correct roots are found\\
+\hline
+\end{DoxyParams}
+Function starts Solve\+Square\+Equation() and gets the number of roots and their values. Then check these roots with correct roots. \begin{DoxyReturn}{Returns}
+roots from Solve\+Square\+Equation() == Correct\+Roots 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8h_a6012eeab2352532ca8e313d21d4f913e}\label{test_8h_a6012eeab2352532ca8e313d21d4f913e}} 
+\index{test.h@{test.h}!PrintEquation@{PrintEquation}}
+\index{PrintEquation@{PrintEquation}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{PrintEquation()}{PrintEquation()}}
+{\footnotesize\ttfamily void Print\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Correct\+Trinomial }\end{DoxyParamCaption})}
+
+
+
+print square equation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Correct\+Trinomial} & -\/ pointer to \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} struct P.\+S. about this struct read documentation of \mbox{\hyperlink{struct_8h}{struct.\+h}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{test_8h_a1d88912033f064d13c3ce97cdc3c0d65}\label{test_8h_a1d88912033f064d13c3ce97cdc3c0d65}} 
+\index{test.h@{test.h}!ReadCorrectSqrTrinomial@{ReadCorrectSqrTrinomial}}
+\index{ReadCorrectSqrTrinomial@{ReadCorrectSqrTrinomial}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{ReadCorrectSqrTrinomial()}{ReadCorrectSqrTrinomial()}}
+{\footnotesize\ttfamily void Read\+Correct\+Sqr\+Trinomial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Ref\+Trinomial,  }\item[{Equation\+Roots\+Quantity $\ast$}]{Correct\+Number\+Of\+Roots,  }\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{Ref\+Roots,  }\item[{FILE $\ast$}]{ptr\+\_\+to\+\_\+test }\end{DoxyParamCaption})}
+
+
+
+Read from file coefficients of square trinomial and its roots. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}}} & $\ast$\+Ref\+Trinomial -\/ structure in which coefficient values are found \\
+\hline
+\mbox{\texttt{ out}}  & {\em Correct\+Number\+Of\+Roots} & -\/ correct root number \\
+\hline
+\mbox{\texttt{ out}}  & {\em Ref\+Roots} & -\/ structure in which correct roots are found \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{test_8h_a7f0f567942854d35204a646c9e855e11}\label{test_8h_a7f0f567942854d35204a646c9e855e11}} 
+\index{test.h@{test.h}!ReadNumber@{ReadNumber}}
+\index{ReadNumber@{ReadNumber}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{ReadNumber()}{ReadNumber()}}
+{\footnotesize\ttfamily double Read\+Number (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{ptr\+\_\+to\+\_\+test }\end{DoxyParamCaption})}
+
+
+
+Read the number from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr\+\_\+to\+\_\+test} & -\/ file pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number 
+\end{DoxyReturn}

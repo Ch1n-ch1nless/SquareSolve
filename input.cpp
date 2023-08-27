@@ -19,8 +19,12 @@ double GetInput(char name_of_cf[], const char symbol)
 
     printf("Введите значение %s многочлена: %c = ", name_of_cf, symbol); //read the coefficient
     scanf_correctness_check_result = scanf("%lg", &temp);
+<<<<<<< Updated upstream
     while (scanf_correctness_check_result == 0)
     {
+=======
+    while (scanf_correctness_check_result == 0) {
+>>>>>>> Stashed changes
         int c;
         while((c = getchar()) != '\n')
             ;

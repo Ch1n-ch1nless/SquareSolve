@@ -1,0 +1,75 @@
+\hypertarget{main_8h}{}\doxysection{main.\+h File Reference}
+\label{main_8h}\index{main.h@{main.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}IOput.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}solve\+\_\+square\+\_\+equation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8h_a5d0d0d8af37bfb52195798246c19684c}{Check\+If\+Test\+Need\+To\+Do}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Run test. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8h_a740013763e4a11c22ebf7d97e66a826d}{Check\+File}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Check if the file name is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{main_8h_a14f488123057993d6f449c9b26c477aa}{unittest}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}
+\begin{DoxyCompactList}\small\item\em Pointer to string \char`\"{}unittest\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a740013763e4a11c22ebf7d97e66a826d}\label{main_8h_a740013763e4a11c22ebf7d97e66a826d}} 
+\index{main.h@{main.h}!CheckFile@{CheckFile}}
+\index{CheckFile@{CheckFile}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{CheckFile()}{CheckFile()}}
+{\footnotesize\ttfamily bool Check\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Check if the file name is correct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & -\/ file name pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the file extension if .txt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a5d0d0d8af37bfb52195798246c19684c}\label{main_8h_a5d0d0d8af37bfb52195798246c19684c}} 
+\index{main.h@{main.h}!CheckIfTestNeedToDo@{CheckIfTestNeedToDo}}
+\index{CheckIfTestNeedToDo@{CheckIfTestNeedToDo}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{CheckIfTestNeedToDo()}{CheckIfTestNeedToDo()}}
+{\footnotesize\ttfamily bool Check\+If\+Test\+Need\+To\+Do (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Run test. 
+
+Function, check if need to do unit tests.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if need to do unit tests. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8h_a14f488123057993d6f449c9b26c477aa}\label{main_8h_a14f488123057993d6f449c9b26c477aa}} 
+\index{main.h@{main.h}!unittest@{unittest}}
+\index{unittest@{unittest}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{unittest}{unittest}}
+{\footnotesize\ttfamily const char unittest\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}}
+
+
+
+Pointer to string \char`\"{}unittest\char`\"{}. 
+
+This string is passed in arguments of function main(). When the unittest pointer is an argument of the main() function, the test program is called. 

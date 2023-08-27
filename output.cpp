@@ -2,8 +2,12 @@
 
 void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Root) //function which print result of program
 {
+<<<<<<< Updated upstream
     switch (quantity)
     {
+=======
+    switch (quantity) {
+>>>>>>> Stashed changes
         case NO_ROOTS:
             printf("Данное уравнение не имеет корней");
             break;
@@ -35,6 +39,7 @@ void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Ro
 
 void ShowInstructionForUser()
 {
+<<<<<<< Updated upstream
     printf("# SolveSquareEquation program version 1.9\n"
            "# Directed by Aleksandrov Oleg\n\n"
            "Здравствуйте, вы запустили программу по решению квадратного уравнения."
@@ -44,4 +49,19 @@ void ShowInstructionForUser()
            "Программа не сможет решить уравнение, если вы введёте не число, а \"пи\", \"exp\", \"4/3\",\"sqrt(2)\".\n"
            "Вы должны ввести целое число (0 или -123 или 228 и т.п.)"
            " или вещественное число в десятичной записи с разделителем в виде точки. Пример: 1.5 (1,5 - неверная форма записи)!\n", OUTPUT_PRECISION);
+=======
+    printf("# SolveSquareEquation program version 1.10\n"
+           "# Directed by Aleksandrov Oleg\n\n"
+           "Здравствуйте, вы запустили программу по решению квадратного уравнения."
+           "Эта программа находит корни с точностью до %d знаков!\n"
+           "Квадратное уравнение имеет следующий вид A * x^2 + B * x + C = 0, "
+           "где A, B, и C - некоторые числа\n"
+           "Чтобы программа могла решить квадартное уравнение, "
+           "то необходимо ввести численное значение трёх коэффицентов.\n"
+           "Программа не сможет решить уравнение, если вы введёте не число, "
+           "а \"пи\", \"exp\", \"4/3\",\"sqrt(2)\".\n"
+           "Вы должны ввести целое число (0 или -123 или 228 и т.п.)"
+           " или вещественное число в десятичной записи с разделителем в виде точки. "
+           "Пример: 1.5 (1,5 - неверная форма записи)!\n", OUTPUT_PRECISION);
+>>>>>>> Stashed changes
 }

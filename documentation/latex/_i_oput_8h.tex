@@ -1,0 +1,82 @@
+\hypertarget{_i_oput_8h}{}\doxysection{IOput.\+h File Reference}
+\label{_i_oput_8h}\index{IOput.h@{IOput.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$TXLib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_i_oput_8h_a447d3270e361d60ce7600ce19ee2b3b8}\label{_i_oput_8h_a447d3270e361d60ce7600ce19ee2b3b8}} 
+void \mbox{\hyperlink{_i_oput_8h_a447d3270e361d60ce7600ce19ee2b3b8}{Show\+Instruction\+For\+User}} ()
+\begin{DoxyCompactList}\small\item\em Show the user guide about how to use the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}{Read\+Square\+Trinomial}} (\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Users\+Trinomial)
+\begin{DoxyCompactList}\small\item\em Read the coefficients of the square trinomial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}{Print\+Result}} (const Equation\+Roots\+Quantity Count\+Of\+Roots, const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} Root)
+\begin{DoxyCompactList}\small\item\em Print the number of roots and their value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}{Get\+Input}} (char name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]}, const char symbol)
+\begin{DoxyCompactList}\small\item\em Read coefficient value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_i_oput_8h_a2e16006983da63e90f4f6b935b9344f1}\label{_i_oput_8h_a2e16006983da63e90f4f6b935b9344f1}} 
+const int \mbox{\hyperlink{_i_oput_8h_a2e16006983da63e90f4f6b935b9344f1}{OUTPUT\+\_\+\+PRECISION}} = 6
+\begin{DoxyCompactList}\small\item\em Precision constant -\/ set num of digits after dot in printf. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}\label{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}} 
+\index{IOput.h@{IOput.h}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!IOput.h@{IOput.h}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily double Get\+Input (\begin{DoxyParamCaption}\item[{char}]{name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]},  }\item[{const char}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Read coefficient value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name\+\_\+of\+\_\+\+CF} & name of coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol} & short name of coefficient (for example\+: A = senior coefficient)\\
+\hline
+\end{DoxyParams}
+Function prints what coefficient value the user should enter. Read the value of coefficient and return this. \begin{DoxyReturn}{Returns}
+value of coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}\label{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}} 
+\index{IOput.h@{IOput.h}!PrintResult@{PrintResult}}
+\index{PrintResult@{PrintResult}!IOput.h@{IOput.h}}
+\doxysubsubsection{\texorpdfstring{PrintResult()}{PrintResult()}}
+{\footnotesize\ttfamily void Print\+Result (\begin{DoxyParamCaption}\item[{const Equation\+Roots\+Quantity}]{Count\+Of\+Roots,  }\item[{const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}}]{Root }\end{DoxyParamCaption})}
+
+
+
+Print the number of roots and their value. 
+
+Function accepts the structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} and enum Equation\+Roots\+Quantity Count\+Of\+Roots. If Count\+Of\+Roots = NO\+\_\+\+ROOTS or INFINITE\+\_\+\+QUANTITY\+\_\+\+ROOTS, does NOT print roots. If Count\+Of\+Roots = ONE\+\_\+\+ROOT, print 1 root. If Count\+Of\+Roots = TWO\+\_\+\+ROOTS, print 2 roots.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Count\+Of\+Roots} & -\/ enum Equation\+Roots\+Quantity \\
+\hline
+\mbox{\texttt{ in}}  & {\em Root} & -\/ structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}\label{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}} 
+\index{IOput.h@{IOput.h}!ReadSquareTrinomial@{ReadSquareTrinomial}}
+\index{ReadSquareTrinomial@{ReadSquareTrinomial}!IOput.h@{IOput.h}}
+\doxysubsubsection{\texorpdfstring{ReadSquareTrinomial()}{ReadSquareTrinomial()}}
+{\footnotesize\ttfamily void Read\+Square\+Trinomial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Users\+Trinomial }\end{DoxyParamCaption})}
+
+
+
+Read the coefficients of the square trinomial. 
+
+Function accepts pointer to structure \textquotesingle{}\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}}\textquotesingle{} and fills its coefficients
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em Users\+Trinomial} & -\/ pointer to structure \textquotesingle{}\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}}\textquotesingle{} \\
+\hline
+\end{DoxyParams}
