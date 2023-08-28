@@ -26,7 +26,7 @@ double GetInput(char name_of_cf[], const char symbol)
         while((c = getchar()) != '\n')
             ;
 
-        printf("\n”пс, вы неверно ввели значение коэффицента, повторите попытку!\n"
+        printf("\nOops, you entered the coefficent wrong, try again!\n"
                "Enter the value of the %s: %s%c\033[0m = ", name_of_cf, YEL,  symbol);
         scanf_correctness_check_result = scanf("%lg", &temp);
     }
