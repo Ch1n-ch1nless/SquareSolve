@@ -21,4 +21,10 @@ If you want to know, how install program on other OS, write me in <a href="https
    <img src="./images/finish.png" width="100%">
 
 <h2 align = "center"> Thank you for reading! </h2>
+<<<<<<< HEAD
 <h4 align = "center"> If you have any questions, write on Telegram(link above) </h4>
+=======
+<h4 align = "center"> If you have any questions, write on Telegram(link above) </h4>
+
+
+>>>>>>> aa2825eb88b6e6ba5c4653c80ec790a93b0790ae
