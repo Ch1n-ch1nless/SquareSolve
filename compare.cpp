@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #include "solve_square_equation.h"
 
 bool CompareDouble(const double number1, const double number2) //function which check the equation of 2 double numbers
