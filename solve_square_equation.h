@@ -31,7 +31,6 @@ const double EPS = 1e-7;
  *  Else calculates the values of roots by formula and return TWO_ROOTS.
  *
  */
-
 EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root);
 
 /**
@@ -48,7 +47,6 @@ EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinom
  *In other cases return NO_ROOTS.
  *
  */
-
 EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root);
 
 /**
@@ -60,7 +58,6 @@ EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinom
  *@return fabs(number1-number2) < comparison const
  *
  */
-
 bool CompareDouble(const double number1, const double number2);
 
 /**
@@ -73,7 +70,6 @@ bool CompareDouble(const double number1, const double number2);
  *If root1 > root2, then root1 and root2 change the value (swap)
  *
  */
-
 void SortRoots(RootsOfTrinomial *Root);
 
 /**
@@ -84,7 +80,6 @@ void SortRoots(RootsOfTrinomial *Root);
  *@return fabs(number) < comparison const
  *
  */
-
 bool IsZero(const double number);
 
 

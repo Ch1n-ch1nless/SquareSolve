@@ -1,67 +1,54 @@
 #include "IOput.h"
 
+static const char* YEL = "\033[0;33m";
+static const char* RED = "\033[0;31m";
+
 void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Root) //function which print result of program
 {
-<<<<<<< Updated upstream
-    switch (quantity)
-    {
-=======
     switch (quantity) {
->>>>>>> Stashed changes
         case NO_ROOTS:
-            printf("Данное уравнение не имеет корней");
+            printf("%sThis equation has no roots\033[0m", RED);
             break;
 
         case ONE_ROOT:
-            printf("Данное уравнение имеет один единственный корень: x = %.*lg",
-                    OUTPUT_PRECISION, Root.first);
+            printf("This equation has one single root: %sx = %.*lg\033[0m",
+                    YEL, OUTPUT_PRECISION, Root.first);
             break;
 
         case TWO_ROOTS:
-            printf("Данное уравнение имеет 2 корня: x1 = %.*lg и x2 = %.*lg",
-                    OUTPUT_PRECISION, Root.first, OUTPUT_PRECISION, Root.second);
+            printf("This equation has 2 roots: %s x1 = %.*lg\033[0m и %sx2 = %.*lg\033[0m",
+                    YEL, OUTPUT_PRECISION, Root.first, YEL, OUTPUT_PRECISION, Root.second);
             break;
 
         case INFINITE_ROOTS_QUANTITY:
-            printf("Данное уравнение имеет бесконечное количество корней:)");
+            printf("This equation has an infinite number of roots:)");
             break;
 
         default:
-            printf("Возникли небольшие технические шоколадки!\n"
-                   "Пожалуйста, не забудьте скинуть числа, которые вы ввели, "
-                   "через смс на номер: 88005553535!\n"
-                   "Проще самому решить, чем прогу вызывать)\b\b");
+            printf("There’s been some technical problems!\n"
+                   "Please remember to reset the numbers you entered, "
+                   "via sms to number: 88005553535!\n"
+                   "It is easier to decide for yourself than to call the program)\b\b");
 
-            assert("Что-то пошло не так в функции OutputResult");
+            assert(false && "\033[0;31mSomething went wrong in the function OutputResult\033[0m");
             break;
     }
 }
 
 void ShowInstructionForUser()
 {
-<<<<<<< Updated upstream
-    printf("# SolveSquareEquation program version 1.9\n"
+    printf("# SolveSquareEquation program version 1.11\n"
            "# Directed by Aleksandrov Oleg\n\n"
-           "Здравствуйте, вы запустили программу по решению квадратного уравнения."
-           "Эта программа находит корни с точностью до %d знаков!\n"
-           "Квадратное уравнение имеет следующий вид A * x^2 + B * x + C = 0, где A, B, и C - некоторые числа\n"
-           "Чтобы программа могла решить квадартное уравнение, то необходимо ввести численное значение трёх коэффицентов.\n"
-           "Программа не сможет решить уравнение, если вы введёте не число, а \"пи\", \"exp\", \"4/3\",\"sqrt(2)\".\n"
-           "Вы должны ввести целое число (0 или -123 или 228 и т.п.)"
-           " или вещественное число в десятичной записи с разделителем в виде точки. Пример: 1.5 (1,5 - неверная форма записи)!\n", OUTPUT_PRECISION);
-=======
-    printf("# SolveSquareEquation program version 1.10\n"
-           "# Directed by Aleksandrov Oleg\n\n"
-           "Здравствуйте, вы запустили программу по решению квадратного уравнения."
-           "Эта программа находит корни с точностью до %d знаков!\n"
-           "Квадратное уравнение имеет следующий вид A * x^2 + B * x + C = 0, "
-           "где A, B, и C - некоторые числа\n"
-           "Чтобы программа могла решить квадартное уравнение, "
-           "то необходимо ввести численное значение трёх коэффицентов.\n"
-           "Программа не сможет решить уравнение, если вы введёте не число, "
-           "а \"пи\", \"exp\", \"4/3\",\"sqrt(2)\".\n"
-           "Вы должны ввести целое число (0 или -123 или 228 и т.п.)"
-           " или вещественное число в десятичной записи с разделителем в виде точки. "
-           "Пример: 1.5 (1,5 - неверная форма записи)!\n", OUTPUT_PRECISION);
->>>>>>> Stashed changes
+           "Hello, you have launched a program to solve the square equation."
+           "This program finds roots up to %d characters!\n"
+           "The square equation is as follows: %sA\033[0m * x^2 + %sB\033[0m * x + %sC\033[0m = 0, "
+           "where %sA\033[0m,  %sB\033[0m,\033[0m и %sC\033[0m - some numbers\n"
+           "In order for the program to solve the square equation, "
+           "you must enter a numerical value of three.\n"
+           "The program cannot solve the equation if you enter not a number, "
+           "but \"pi\", \"exp\", \"4/3\",\"sqrt(2)\", etc.\n"
+           "You must enter an integer (0 or -123 or 228 etc.)"
+           "or a real number in a decimal notation with a dot delimiter "
+           "Example: 1.5 (1.5 - incorrect writing)!\n",
+           OUTPUT_PRECISION, YEL, YEL, YEL, YEL, YEL, YEL);
 }

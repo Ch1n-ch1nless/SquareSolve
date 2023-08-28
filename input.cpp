@@ -1,14 +1,16 @@
 #include "IOput.h"
 
+static const char* YEL = "\033[0;33m";
+
 void ReadSquareTrinomial(SquareTrinomialCoef *UsersTrinomial)
 {
     assert((UsersTrinomial != nullptr) && "Pointer to polynomial is nullptr!!!");
 
-    char senior_cf[] = "старшего коэффициента";
+    char senior_cf[] = "senior coefficient";
     UsersTrinomial->senior_cf = GetInput(senior_cf, 'A');
-    char second_cf[] = "второго коэффициента";
+    char second_cf[] = "second coefficient";
     UsersTrinomial->second_cf = GetInput(second_cf, 'B');
-    char free_term[] = "свободного члена";
+    char free_term[] = "free term";
     UsersTrinomial->free_term = GetInput(free_term, 'C');
 }
 
@@ -17,20 +19,15 @@ double GetInput(char name_of_cf[], const char symbol)
     double temp = NAN; //time variable
     bool scanf_correctness_check_result = false; //value which check the correctness of input
 
-    printf("Введите значение %s многочлена: %c = ", name_of_cf, symbol); //read the coefficient
+    printf("Enter the value of the %s: %s%c\033[0m = ", name_of_cf, YEL, symbol); //read the coefficient
     scanf_correctness_check_result = scanf("%lg", &temp);
-<<<<<<< Updated upstream
-    while (scanf_correctness_check_result == 0)
-    {
-=======
     while (scanf_correctness_check_result == 0) {
->>>>>>> Stashed changes
-        int c;
+        int c = 0;
         while((c = getchar()) != '\n')
             ;
 
         printf("\nУпс, вы неверно ввели значение коэффицента, повторите попытку!\n"
-               "Введите значение %s многочлена: %c = ", name_of_cf,  symbol);
+               "Enter the value of the %s: %s%c\033[0m = ", name_of_cf, YEL,  symbol);
         scanf_correctness_check_result = scanf("%lg", &temp);
     }
 

@@ -1,7 +1,5 @@
-<<<<<<< Updated upstream
-=======
 ///@file test.h
->>>>>>> Stashed changes
+
 #ifndef TEST_H_INCLUDED
 #define TEST_H_INCLUDED
 
@@ -11,10 +9,6 @@
 #include <TXLib.h>
 #include "struct.h"
 
-<<<<<<< Updated upstream
-const int NUMBER_OF_TESTS = 10;
-
-=======
 /// Number of tests
 const int NUMBER_OF_TESTS = 10;
 
@@ -30,18 +24,9 @@ const int NUMBER_OF_TESTS = 10;
  *Then check these roots with correct roots.
  *@return roots from SolveSquareEquation() == CorrectRoots
  */
->>>>>>> Stashed changes
 int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial,
                             EquationRootsQuantity CorrectNumberOfRoots,
                             const RootsOfTrinomial *CorrectRoots);
-
-<<<<<<< Updated upstream
-void RunTests();
-
-void ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
-                             EquationRootsQuantity *CorrectNumberOfRoots,
-                             RootsOfTrinomial *RefRoots);
-=======
 /**
  *
  *@brief runs tests
@@ -56,6 +41,7 @@ void RunTests(const char *file_name);
  *@param [out] SquareTrinomialCoef *RefTrinomial - structure in which coefficient values are found
  *@param [out] CorrectNumberOfRoots - correct root number
  *@param [out] RefRoots - structure in which correct roots are found
+ *@param [in] FILE - file pointer
  *
  */
 void ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
@@ -79,6 +65,5 @@ double ReadNumber(FILE *ptr_to_test);
  *P.S. about this struct read documentation of struct.h
  */
 void PrintEquation(const SquareTrinomialCoef *CorrectTrinomial);
->>>>>>> Stashed changes
 
 #endif // TEST_H_INCLUDED
