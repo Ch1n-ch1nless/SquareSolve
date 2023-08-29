@@ -57,4 +57,9 @@ double GetNumber(char name_of_CF[], const char symbol);
  */
 void ClearBUF();
 
+/**
+ *@brief show list with commands
+ */
+void ShowHelp();
+
 #endif // IOPUT_H_INCLUDED

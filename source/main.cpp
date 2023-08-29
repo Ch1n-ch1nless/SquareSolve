@@ -24,16 +24,20 @@ int main(int argc, const char* argv[])
         printf("You print incorrect arguments!");
         }
     } else {
-        printf("You print incorrect arguments!");
+        if (!strcmp(argv[1], help)) {
+            ShowHelp();
+        } else {
+            printf("You print incorrect arguments!");
+        }
     }
 
     return 0;
 }
 
-bool CheckIfTestNeedToDo(int argc, const char* argv[])
+int CheckIfTestNeedToDo(int argc, const char* argv[])
 {
     if (argc == 1) {
-        return false;
+        return 0;
     }
     return (!strcmp(argv[1], unittest)) ? 1 : -1;
 }

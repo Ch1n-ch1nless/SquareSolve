@@ -1,4 +1,4 @@
-///@file main.h
+///@file need_test_to_do.h
 
 #ifndef NEED_TEST_TO_DO_H_INCLUDED
 #define NEED_TEST_TO_DO_H_INCLUDED
@@ -9,7 +9,7 @@
 #include "test.h"
 
 /**
- * @brief Pointer to string "unittest"
+ * @brief Pointer to string "--unit_test"
  *
  * This string is passed in arguments of function main().
  * When the unittest pointer is an argument of the main() function,
@@ -17,6 +17,16 @@
  *
  */
 const char unittest[] = "--unit_test";
+
+/**
+ * @brief Pointer to string "--help"
+ *
+ * This string is passed in arguments of function main().
+ * When the help pointer is an argument of the main() function,
+ * the program show what commands user can enter.
+ *
+ */
+const char help[] = "--help";
 
 /**
  * @brief Run test.
@@ -27,7 +37,7 @@ const char unittest[] = "--unit_test";
  * @param [in] argv
  * @return if need to do unit tests.
  */
-bool CheckIfTestNeedToDo(int argc, const char* argv[]);
+int CheckIfTestNeedToDo(int argc, const char* argv[]);
 
 /**
  *

@@ -46,10 +46,20 @@ void ShowInstructionForUser()
            "where %sA%s, %sB%s, è %sC%s - some%s numbers%s\n"
            "The program cannot solve the equation if you enter%s not%s a%s number%s, "
            "but \"pi\", \"exp\", \"4/3\",\"sqrt(2)\", etc.\n"
-           "You must enter an integer (0 or -123 or 228 etc.)"
-           "or a real number in a decimal notation with a dot delimiter "
+           "You must enter an integer (0 or -123 or 228 etc.) "
+           "or a real number in a decimal notation with a dot delimiter.\n"
            "%sExample:%s 1.5 (1,5 - incorrect writing)!\n",
            ESCGREEN, OUTPUT_PRECISION, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT,
            ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT,
            ESCGREEN, ESCDEFAULT, ESCRED, ESCDEFAULT, ESCGREEN, ESCDEFAULT, ESCYELLOW, ESCDEFAULT);
+}
+
+void ShowHelp()
+{
+    printf("Options:\n"
+           "%s--unit_test UNITtest.txt%s  --  run tests\n"
+           "%s--help%s --  show shows which command line arguments you can enter\n"
+           "%s %s -- solve square equation\n"
+           "to execute these commands enter yellow terminal commands!",
+           ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT);
 }
