@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <math.h>
 
-#include "struct.h"
+#include "trinomial.h"
 
 /**
  *@brief Accuracy of the comparison
@@ -17,9 +17,8 @@ const double EPS = 1e-7;
  *
  *@brief Solve square equation
  *
- *@param [in] UsersTrinomial - structure in which coefficient values are found
- *@param [out] Root - structure with root values
- *@return EquationRootsQuantity number of roots
+ *@param [in] users_trinomial - structure in which coefficient values are found
+ *@param [out] root - structure with root values
  *
  * Algorithm:
  *  If the senior coefficient is 0, then starts SolveLinearEquation().
@@ -29,15 +28,14 @@ const double EPS = 1e-7;
  *  Else calculates the values of roots by formula and return TWO_ROOTS.
  *
  */
-EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root);
+void SolveSquareEquation(const SquareTrinomialCoef *users_trinomial, RootsOfTrinomial *root);
 
 /**
  *
  *@brief Solve linear equation
  *
- *@param [in] UsersTrinomial structure in which coefficient values are found
- *@param [in] Root structure with root values
- *@param [out] EquationRootsQuantity number of roots
+ *@param [in] users_trinomial - structure in which coefficient values are found
+ *@param [in] root - structure with root values
  *
  *The function solves a linear equation.
  *If the coefficient before x is not 0, then return ONE_ROOT. value of root = -free term / coefficient.
@@ -45,7 +43,7 @@ EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinom
  *In other cases return NO_ROOTS.
  *
  */
-EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root);
+void SolveLinearEquation(const SquareTrinomialCoef *users_trinomial, RootsOfTrinomial *root);
 
 /**
  *
@@ -68,7 +66,7 @@ bool CompareDouble(const double number1, const double number2);
  *If root1 > root2, then root1 and root2 change the value (swap)
  *
  */
-void SortRoots(RootsOfTrinomial *Root);
+void SortRoots(RootsOfTrinomial *root);
 
 /**
  *

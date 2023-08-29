@@ -1,23 +1,28 @@
 #include "IOput.h"
 
-static const char* YEL = "\033[0;33m";
-static const char* RED = "\033[0;31m";
+static const char* ESCYELLOW = "\033[0;33m";
+static const char* ESCRED = "\033[0;31m";
+static const char* ESCDEFAULT = "\033[0m";
+static const char* ESCGREEN = "\033[0;32m";
 
-void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Root) //function which print result of program
+#define REDASSERT(str) "\033[0;31m" %str "\033[0m"
+
+void PrintResult(const RootsOfTrinomial root) //function which print result of program
 {
-    switch (quantity) {
+    switch (root.number) {
         case NO_ROOTS:
-            printf("%sThis equation has no roots\033[0m", RED);
+            printf("%sThis equation has no roots%s", ESCRED, ESCDEFAULT);
             break;
 
         case ONE_ROOT:
-            printf("This equation has one single root: %sx = %.*lg\033[0m",
-                    YEL, OUTPUT_PRECISION, Root.first);
+            printf("This equation has one single root: %sx = %.*lg%s",
+                    ESCYELLOW, OUTPUT_PRECISION, root.first, ESCDEFAULT);
             break;
 
         case TWO_ROOTS:
-            printf("This equation has 2 roots: %s x1 = %.*lg\033[0m è %sx2 = %.*lg\033[0m",
-                    YEL, OUTPUT_PRECISION, Root.first, YEL, OUTPUT_PRECISION, Root.second);
+            printf("This equation has 2 roots: %s x1 = %.*lg%s è %sx2 = %.*lg%s",
+                    ESCYELLOW, OUTPUT_PRECISION, root.first, ESCDEFAULT, ESCYELLOW,
+                    OUTPUT_PRECISION, root.second, ESCDEFAULT);
             break;
 
         case INFINITE_ROOTS_QUANTITY:
@@ -30,25 +35,25 @@ void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Ro
                    "via sms to number: 88005553535!\n"
                    "It is easier to decide for yourself than to call the program)\b\b");
 
-            assert(false && "\033[0;31mSomething went wrong in the function OutputResult\033[0m");
+            assert(false && REDASSERT("Something went wrong in the function OutputResult"));
             break;
     }
 }
 
 void ShowInstructionForUser()
 {
-    printf("# SolveSquareEquation program version 1.13\n"
+    printf("# SolveSquareEquation program version 1.14\n"
            "# Directed by Aleksandrov Oleg\n\n"
-           "Hello, you have launched a program to solve the square equation."
-           "This program finds roots up to %d characters!\n"
-           "The square equation is as follows: %sA\033[0m * x^2 + %sB\033[0m * x + %sC\033[0m = 0, "
-           "where %sA\033[0m,  %sB\033[0m,\033[0m è %sC\033[0m - some numbers\n"
-           "In order for the program to solve the square equation, "
-           "you must enter a numerical value of three.\n"
-           "The program cannot solve the equation if you enter not a number, "
+           "Hello, you have launched a program to solve the square equation.\n"
+           "This program finds roots up to %s%d%s characters!\n"
+           "%sA%s * x^2 + %sB%s * x + %sC%s = 0, "
+           "where %sA%s, %sB%s, è %sC%s - some%s numbers%s\n"
+           "The program cannot solve the equation if you enter%s not%s a%s number%s, "
            "but \"pi\", \"exp\", \"4/3\",\"sqrt(2)\", etc.\n"
            "You must enter an integer (0 or -123 or 228 etc.)"
            "or a real number in a decimal notation with a dot delimiter "
-           "Example: 1.5 (1.5 - incorrect writing)!\n",
-           OUTPUT_PRECISION, YEL, YEL, YEL, YEL, YEL, YEL);
+           "%sExample:%s 1.5 (1,5 - incorrect writing)!\n",
+           ESCGREEN, OUTPUT_PRECISION, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT,
+           ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT,
+           ESCGREEN, ESCDEFAULT, ESCRED, ESCDEFAULT, ESCGREEN, ESCDEFAULT, ESCYELLOW, ESCDEFAULT);
 }

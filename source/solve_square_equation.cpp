@@ -1,68 +1,72 @@
 #include "solve_square_equation.h"
 
-EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root)
+void SolveSquareEquation(const SquareTrinomialCoef *users_trinomial, RootsOfTrinomial *root)
 {
-    if (IsZero(UsersTrinomial->senior_cf)) {
-        return SolveLinearEquation(UsersTrinomial, Root);
+    assert((users_trinomial != nullptr) && "Pointer to Polynomial is nullptr!!!");
+    assert((root != nullptr) && "Pointer to Polynomial is nullptr!!!");
+
+    assert((isnan(users_trinomial->senior_cf) == false) && "Senior coefficient = NAN!!!");
+    assert((isnan(users_trinomial->second_cf) == false) && "Second coefficient = NAN!!!");
+    assert((isnan(users_trinomial->free_term) == false) && "Free term = NAN!!!");
+
+    assert((isfinite(users_trinomial->senior_cf)) && "Senior coefficient = INF!!!");
+    assert((isfinite(users_trinomial->second_cf)) && "Second coefficient = INF!!!");
+    assert((isfinite(users_trinomial->free_term)) && "Free term = INF!!!");
+
+    if (IsZero(users_trinomial->senior_cf)) {
+        return SolveLinearEquation(users_trinomial, root);
     }
 
-    double Discriminant = UsersTrinomial->second_cf * UsersTrinomial->second_cf - 4 *
-                          UsersTrinomial->senior_cf * UsersTrinomial->free_term;
+    double discriminant = users_trinomial->second_cf * users_trinomial->second_cf - 4 *
+                          users_trinomial->senior_cf * users_trinomial->free_term;
 
-     assert((isnan(Discriminant) == false) && "Oops, Discriminant is NAN!!!");
-     assert((isfinite(Discriminant)) && "Oops, Discriminant is very big! D = INF!!!");
+     assert((isnan(discriminant) == false) && "Oops, Discriminant is NAN!!!");
+     assert((isfinite(discriminant)) && "Oops, Discriminant is very big! D = INF!!!");
 
-    if (IsZero(Discriminant)) {
-        Root->first = -UsersTrinomial->second_cf / (2 * UsersTrinomial->senior_cf);
-        Root->first = (IsZero(Root->first)) ? 0.0 : Root->first;
-
-        return ONE_ROOT;
+    if (IsZero(discriminant)) {
+        root->first = -users_trinomial->second_cf / (2 * users_trinomial->senior_cf);
+        root->first = (IsZero(root->first)) ? 0.0 : root->first;
+        root->number = ONE_ROOT;
+        return;
     }
-    else if (Discriminant >= EPS) {//Discriminant > 0
-        double sqrt_Disc = sqrt(Discriminant);
+    else if (discriminant >= EPS) {//Discriminant > 0
+        double sqrt_disc = sqrt(discriminant);
 
-        Root->first = (-(UsersTrinomial->second_cf) - sqrt_Disc) / (2 * UsersTrinomial->senior_cf);
-        Root->second = (-(UsersTrinomial->second_cf) + sqrt_Disc) / (2 * UsersTrinomial->senior_cf);
+        root->first  = (-(users_trinomial->second_cf) - sqrt_disc) / (2 * users_trinomial->senior_cf);
+        root->second = (-(users_trinomial->second_cf) + sqrt_disc) / (2 * users_trinomial->senior_cf);
 
-        Root->first = (IsZero(Root->first)) ? 0.0 : Root->first;
-        Root->second = (IsZero(Root->second)) ? 0.0 : Root->second;
+        root->first = (IsZero(root->first)) ? 0.0 : root->first;
+        root->second = (IsZero(root->second)) ? 0.0 : root->second;
 
-        SortRoots(Root);
-        return TWO_ROOTS;
+        SortRoots(root);
+        root->number = TWO_ROOTS;
+        return;
     }
-    return NO_ROOTS; //Discriminant < 0
+    root->number = NO_ROOTS; //Discriminant < 0
 }
 
-EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root)
+void SolveLinearEquation(const SquareTrinomialCoef *users_trinomial, RootsOfTrinomial *root)
 {
-    assert((UsersTrinomial != nullptr) && "Pointer to Polynomial is nullptr!!!");
-
-    assert((isnan(UsersTrinomial->senior_cf) == false) && "Senior coefficient = NAN!!!");
-    assert((isnan(UsersTrinomial->second_cf) == false) && "Second coefficient = NAN!!!");
-    assert((isnan(UsersTrinomial->free_term) == false) && "Free term = NAN!!!");
-
-    assert((isfinite(UsersTrinomial->senior_cf)) && "Senior coefficient = INF!!!");
-    assert((isfinite(UsersTrinomial->second_cf)) && "Second coefficient = INF!!!");
-    assert((isfinite(UsersTrinomial->free_term)) && "Free term = INF!!!");
-
-    if (IsZero(UsersTrinomial->second_cf)) {
-        if(IsZero(UsersTrinomial->free_term)) {
-            return INFINITE_ROOTS_QUANTITY;
+    if (IsZero(users_trinomial->second_cf)) {
+        if(IsZero(users_trinomial->free_term)) {
+            root->number = INFINITE_ROOTS_QUANTITY;
+            return;
         }
-        return NO_ROOTS;
+        root->number = NO_ROOTS;
+        return;
     }
-    Root->first = -UsersTrinomial->free_term / UsersTrinomial->second_cf;
-    Root->first = (IsZero(Root->first)) ? 0.0 : Root->first;
+    root->first = -users_trinomial->free_term / users_trinomial->second_cf;
+    root->first = (IsZero(root->first)) ? 0.0 : root->first;
 
-    return ONE_ROOT;
+    root->number = ONE_ROOT;
 }
 
-void SortRoots(RootsOfTrinomial *Root)
+void SortRoots(RootsOfTrinomial *root)
 {
-    if (Root->second < Root->first) {
+    if (root->second < root->first) {
         double temp = NAN;
-        temp = Root->second;
-        Root->second = Root->first;
-        Root->first = temp;
+        temp = root->second;
+        root->second = root->first;
+        root->first = temp;
     }
 }

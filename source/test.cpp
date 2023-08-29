@@ -1,9 +1,9 @@
 #include "test.h"
 #include "solve_square_equation.h"
 
-static const char* RED = "\033[0;31m";
-static const char* GRN = "\033[0;32m";
-static const char* DEFAULT = "\033[0m";
+static const char* ESCRED = "\033[0;31m";
+static const char* ESCGREEN = "\033[0;32m";
+static const char* ESCDEFAULT = "\033[0m";
 
 
 #define READ_DOUBLE_FROM_FILE(struct_ptr, field_name)                               \
@@ -16,71 +16,72 @@ do {                                                                            
     }                                                                               \
 } while (0);
 
-int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial,
-                            EquationRootsQuantity CorrectNumberOfRoots,
-                            const RootsOfTrinomial *CorrectRoots)
+int CheckCorrectnessOfSolve(const SquareTrinomialCoef *correct_trinomial,
+                            const RootsOfTrinomial *correct_root)
 {
-    SquareTrinomialCoef TestTrinomial;
-    RootsOfTrinomial TestRoot;
+    assert(correct_trinomial != nullptr);
+    assert(correct_root != nullptr);
+    SquareTrinomialCoef test_trinomial;
+    RootsOfTrinomial test_root;
 
-    TestTrinomial.senior_cf = CorrectTrinomial->senior_cf;
-    TestTrinomial.second_cf = CorrectTrinomial->second_cf;
-    TestTrinomial.free_term = CorrectTrinomial->free_term;
+    test_trinomial.senior_cf = correct_trinomial->senior_cf;
+    test_trinomial.second_cf = correct_trinomial->second_cf;
+    test_trinomial.free_term = correct_trinomial->free_term;
 
-    EquationRootsQuantity CountOfRoots = SolveSquareEquation(&TestTrinomial, &TestRoot);
+    SolveSquareEquation(&test_trinomial, &test_root);
 
-    if (CountOfRoots != CorrectNumberOfRoots)
+    if (test_root.number != correct_root->number)
     {
         printf("%s FAILED!\n"
               "EXPECTED: count of roots = %d\n"
               "RECEIVED: count of roots = %d\n %s",
-              RED, CountOfRoots, CorrectNumberOfRoots, DEFAULT);
+              ESCRED, test_root.number, correct_root->number, ESCDEFAULT);
 
-        PrintEquation(CorrectTrinomial);
+        PrintEquation(correct_trinomial);
         return 0;
     }
 
-    switch(CountOfRoots)
+    switch(correct_root->number)
     {
         case NO_ROOTS:
-            printf("%s OK\n %s", GRN, DEFAULT);
+            printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
             return 1;
 
         case INFINITE_ROOTS_QUANTITY:
-            printf("%s OK\n %s", GRN, DEFAULT);
+            printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
             return 1;
 
         case ONE_ROOT:
-            if (CompareDouble(TestRoot.first, CorrectRoots->first))
+            if (CompareDouble(test_root.first, correct_root->first))
             {
-                printf("%s OK\n %s", GRN, DEFAULT);
+                printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
                 return 1;
             } else {
                  printf("%s FAILED!\n"
                         "EXPECTED: root = %lg\n"
                         "RECEIVED: count of roots = %lg\n %s",
-                        RED, CorrectRoots->first,
-                        TestRoot.first, DEFAULT);
+                        ESCRED, correct_root->first,
+                        test_root.first, ESCDEFAULT);
 
-                PrintEquation(CorrectTrinomial);
+                PrintEquation(correct_trinomial);
                 return 0;
 
             }
 
         case TWO_ROOTS:
-            if (CompareDouble(TestRoot.first,  CorrectRoots->first) &&
-                CompareDouble(TestRoot.second, CorrectRoots->second))
+            if (CompareDouble(test_root.first,  correct_root->first) &&
+                CompareDouble(test_root.second, correct_root->second))
             {
-                printf("%s OK\n %s", GRN, DEFAULT);
+                printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
                 return 1;
             } else {
                  printf("%s FAILED!\n"
                         "EXPECTED: root1 = %lg and root2 = %lg\n"
                         "RECEIVED: root1 = %lg and root2 = %lg\n %s",
-                        RED, CorrectRoots->first, CorrectRoots->second,
-                        TestRoot.first, TestRoot.second, DEFAULT);
+                        ESCRED, correct_root->first, correct_root->second,
+                        test_root.first, test_root.second, ESCDEFAULT);
 
-                PrintEquation(CorrectTrinomial);
+                PrintEquation(correct_trinomial);
                 return 0;
 
             }
@@ -90,44 +91,44 @@ int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial,
             assert(false);
             return 0;
     }
+    return 0;
 }
 
 void RunTests(const char *file_name)
 {
-    int NUMBER_OF_TESTS = 0;
+    int number_of_tests = 0;
     FILE *ptr_to_test = fopen(file_name, "r");
     if (ptr_to_test == nullptr) {
         printf("File %s wasn't found!!!\n", file_name);
+        assert(0);
         return;
     }
 
     int count_of_ok_tests = 0;
 
-    SquareTrinomialCoef RefTrinomial;
-    EquationRootsQuantity CorrectNumberOfRoots = NO_ROOTS;
-    RootsOfTrinomial RefRoots;
+    SquareTrinomialCoef ref_trinomial;
+    RootsOfTrinomial ref_roots;
 
-    while (ReadCorrectSqrTrinomial(&RefTrinomial, &CorrectNumberOfRoots, &RefRoots, ptr_to_test))
+    while (ReadCorrectSqrTrinomial(&ref_trinomial, &ref_roots, ptr_to_test))
     {
-        NUMBER_OF_TESTS++;
-        printf("Test ¹%d ", NUMBER_OF_TESTS);
-        count_of_ok_tests += CheckCorrectnessOfSolve(&RefTrinomial, CorrectNumberOfRoots, &RefRoots);
+        number_of_tests++;
+        printf("Test ¹%d ", number_of_tests);
+        count_of_ok_tests += CheckCorrectnessOfSolve(&ref_trinomial, &ref_roots);
     }
-    printf("Tests passed: %d / %d", count_of_ok_tests, NUMBER_OF_TESTS);
+    printf("Tests passed: %d / %d", count_of_ok_tests, number_of_tests);
 }
 
-bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
-                             EquationRootsQuantity *CorrectNumberOfRoots,
-                             RootsOfTrinomial *RefRoots, FILE *ptr_to_test)
+bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
+                             RootsOfTrinomial *ref_roots, FILE *ptr_to_test)
 {
 
     int check_correct_numbers_test = 0;
 
-    READ_DOUBLE_FROM_FILE(RefTrinomial, senior_cf) //immediately return from function by mistake
-    READ_DOUBLE_FROM_FILE(RefTrinomial, second_cf)
-    READ_DOUBLE_FROM_FILE(RefTrinomial, free_term)
-    READ_DOUBLE_FROM_FILE(RefRoots,     first)
-    READ_DOUBLE_FROM_FILE(RefRoots,     second)
+    READ_DOUBLE_FROM_FILE(ref_trinomial, senior_cf) //immediately return from function by mistake
+    READ_DOUBLE_FROM_FILE(ref_trinomial, second_cf)
+    READ_DOUBLE_FROM_FILE(ref_trinomial, free_term)
+    READ_DOUBLE_FROM_FILE(ref_roots,     first)
+    READ_DOUBLE_FROM_FILE(ref_roots,     second)
 
     int Temp = 0;
     int scanf_correctness_check_result = fscanf(ptr_to_test, "%d", &Temp);
@@ -136,18 +137,17 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
     }
     check_correct_numbers_test++;
 
-    *CorrectNumberOfRoots = (EquationRootsQuantity) Temp;
+    ref_roots->number = (EquationRootsQuantity) Temp;
 
     return check_correct_numbers_test == 6;
 }
 
 double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)
 {
-    double temp = NAN; //time variable
+    double temp = NAN; //temporary variable
     int scanf_correctness_check_result = 0; //variable that checks the correctness of reading from the file
     scanf_correctness_check_result = fscanf(ptr_to_test, "%lg", &temp);
     if (scanf_correctness_check_result == EOF) {
-        //assert(0 && "Error! The program can't read the var!\n");
         return -1;
     }
     (*check_correct_numbers_test)++;
@@ -156,12 +156,12 @@ double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)
     return temp;
 }
 
-void PrintEquation(const SquareTrinomialCoef *CorrectTrinomial)
+void PrintEquation(const SquareTrinomialCoef *correct_trinomial)
 {
     printf("%s EQUATION: %lg * x^2 + %lg * x + %lg\n %s",
-           RED,
-           CorrectTrinomial->senior_cf,
-           CorrectTrinomial->second_cf,
-           CorrectTrinomial->free_term,
-           DEFAULT);
+           ESCRED,
+           correct_trinomial->senior_cf,
+           correct_trinomial->second_cf,
+           correct_trinomial->free_term,
+           ESCDEFAULT);
 }

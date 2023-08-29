@@ -7,23 +7,21 @@
 #include <math.h>
 #include <stdio.h>
 #include <TXLib.h>
-#include "struct.h"
+#include "trinomial.h"
 
 /**
  *
  *@brief check the correctness of the SolveSquareEquation()
  *
  *@param [in] CorrectTrinomial - structure in which coefficient values are found
- *@param [in] CorrectNumberOfRoots - correct root number
  *@param [in] CorrectRoots - structure in which correct roots are found
  *
  *Function starts SolveSquareEquation() and gets the number of roots and their values.
  *Then check these roots with correct roots.
- *@return roots from SolveSquareEquation() == CorrectRoots
+ *@return roots from SolveSquareEquation() == correct roots
  */
-int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial,
-                            EquationRootsQuantity CorrectNumberOfRoots,
-                            const RootsOfTrinomial *CorrectRoots);
+int CheckCorrectnessOfSolve(const SquareTrinomialCoef *correct_trinomial,
+                            const RootsOfTrinomial *correct_root);
 /**
  *
  *@brief runs tests
@@ -41,9 +39,8 @@ void RunTests(const char *file_name);
  *@param [in] FILE - file pointer
  *
  */
-bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
-                             EquationRootsQuantity *CorrectNumberOfRoots,
-                             RootsOfTrinomial *RefRoots,
+bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
+                             RootsOfTrinomial *ref_roots,
                              FILE *ptr_to_test);
 /**
  *
@@ -61,6 +58,6 @@ double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test);
  *@param [in] CorrectTrinomial - pointer to SquareTrinomialCoef struct
  *P.S. about this struct read documentation of struct.h
  */
-void PrintEquation(const SquareTrinomialCoef *CorrectTrinomial);
+void PrintEquation(const SquareTrinomialCoef *correct_trinomial);
 
 #endif // TEST_H_INCLUDED

@@ -23,6 +23,7 @@ struct RootsOfTrinomial
 {
     double first = NAN;  //!<first root of equation
     double second = NAN; //!<second root of equation
+    EquationRootsQuantity number = NO_ROOTS; //!<number of roots
 };
 
 #endif // STRUCT_H_INCLUDED

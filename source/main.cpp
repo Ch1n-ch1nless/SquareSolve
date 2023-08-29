@@ -2,25 +2,28 @@
 
 int main(int argc, const char* argv[])
 {
-    bool flag = CheckIfTestNeedToDo(argc, argv);
+    int need_test = CheckIfTestNeedToDo(argc, argv);
 
-    if (flag == false) {
+    if (need_test == 0) {
         ShowInstructionForUser();      //Show the user the instructions for using the program
 
-        SquareTrinomialCoef UsersTrinomial;     //The User's equation which need to solve
-        RootsOfTrinomial RootsOfUsersTrinomial; //The roots of SquareTrinomial
+        SquareTrinomialCoef users_trinomial;     //The User's equation which need to solve
+        RootsOfTrinomial roots_of_trinomial; //The roots of SquareTrinomial
 
-        ReadSquareTrinomial(&UsersTrinomial);     //Read the coefficients of polynomial
-        EquationRootsQuantity CountOfRoots = SolveSquareEquation(&UsersTrinomial, &RootsOfUsersTrinomial);    //Solve the square equation and calculate the number of roots
+        ReadSquareTrinomial(&users_trinomial);     //Read the coefficients of polynomial
+        SolveSquareEquation(&users_trinomial, &roots_of_trinomial);    //Solve the square equation
 
-        PrintResult(CountOfRoots, RootsOfUsersTrinomial);    //Print the result of program
-    } else {
+        PrintResult(roots_of_trinomial);    //Print the result of program
+    } else if (need_test == 1){
         if (argc >= 3) {
             const char *file_name = argv[2];
             if (CheckFile(file_name)) {
                 RunTests(argv[2]);
             }
+        } else {
+        printf("You print incorrect arguments!");
         }
+    } else {
         printf("You print incorrect arguments!");
     }
 
@@ -32,7 +35,7 @@ bool CheckIfTestNeedToDo(int argc, const char* argv[])
     if (argc == 1) {
         return false;
     }
-    return (!strcmp(argv[1], unittest));
+    return (!strcmp(argv[1], unittest)) ? 1 : -1;
 }
 
 bool CheckFile(const char *str)

@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <TXLib.h>
-#include "struct.h"
+#include "trinomial.h"
 
 /**
  * @brief Precision constant  - set num of digits after dot in printf
@@ -30,16 +30,15 @@ void ReadSquareTrinomial(SquareTrinomialCoef *UsersTrinomial);
 /**
  * @brief Print the number of roots and their value
  *
- * Function accepts the structure 'RootsOfTrinomial' and enum EquationRootsQuantity CountOfRoots.
+ * Function accepts the structure 'RootsOfTrinomial'.
  * If CountOfRoots = NO_ROOTS or INFINITE_QUANTITY_ROOTS, does NOT print roots.
  * If CountOfRoots = ONE_ROOT, print 1 root.
  * If CountOfRoots = TWO_ROOTS, print 2 roots.
  *
- * @param [out] CountOfRoots - enum EquationRootsQuantity
- * @param [out] Root - structure 'RootsOfTrinomial'
+ * @param [out] root - structure 'RootsOfTrinomial'
  *
  */
-void PrintResult(const EquationRootsQuantity CountOfRoots, const RootsOfTrinomial Root);
+void PrintResult(const RootsOfTrinomial root);
 
 /**
  *
