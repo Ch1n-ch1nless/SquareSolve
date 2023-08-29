@@ -1,4 +1,4 @@
-///@file struct.h
+///@file trinomial.h
 #ifndef STRUCT_H_INCLUDED
 #define STRUCT_H_INCLUDED
 

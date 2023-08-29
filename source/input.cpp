@@ -8,14 +8,14 @@ void ReadSquareTrinomial(SquareTrinomialCoef *users_trinomial)
     assert((users_trinomial != nullptr) && "Pointer to polynomial is nullptr!!!");
 
     char senior_cf[] = "senior coefficient";
-    users_trinomial->senior_cf = GetInput(senior_cf, 'A');
+    users_trinomial->senior_cf = GetNumber(senior_cf, 'A');
     char second_cf[] = "second coefficient";
-    users_trinomial->second_cf = GetInput(second_cf, 'B');
+    users_trinomial->second_cf = GetNumber(second_cf, 'B');
     char free_term[] = "free term";
-    users_trinomial->free_term = GetInput(free_term, 'C');
+    users_trinomial->free_term = GetNumber(free_term, 'C');
 }
 
-double GetInput(char name_of_cf[], const char symbol)
+double GetNumber(char name_of_cf[], const char symbol)
 {
     double temp = NAN; //temporary variable
     bool scanf_correctness_check_result = false; //value which check the correctness of input
@@ -24,7 +24,7 @@ double GetInput(char name_of_cf[], const char symbol)
            name_of_cf, ESCYELLOW, symbol, ESCDEFAULT); //read the coefficient
     scanf_correctness_check_result = scanf("%lg", &temp);
     while (scanf_correctness_check_result == 0) {
-        clearBUF();
+        ClearBUF();
 
         printf("\nOops, you entered the coefficent wrong, try again!\n"
                "Enter the value of the %s: %s%c%s = ",
@@ -34,11 +34,11 @@ double GetInput(char name_of_cf[], const char symbol)
 
     assert((isnan(temp) == false) && "temp = NAN");
     assert((isfinite(temp)) && "temp = INFINITY");
-    clearBUF();
+    ClearBUF();
     return temp;
 }
 
-void clearBUF() {
+void ClearBUF() {
     int c = 0;
     while((c = getchar()) != '\n')
         ;

@@ -50,11 +50,11 @@ void PrintResult(const RootsOfTrinomial root);
  * Read the value of coefficient and return this.
  * @return value of coefficient
  */
-double GetInput(char name_of_CF[], const char symbol);
+double GetNumber(char name_of_CF[], const char symbol);
 
 /**
  *@brief clear input buffer
  */
-void clearBUF();
+void ClearBUF();
 
 #endif // IOPUT_H_INCLUDED

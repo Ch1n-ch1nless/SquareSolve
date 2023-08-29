@@ -99,7 +99,7 @@ void RunTests(const char *file_name)
     int number_of_tests = 0;
     FILE *ptr_to_test = fopen(file_name, "r");
     if (ptr_to_test == nullptr) {
-        printf("File %s wasn't found!!!\n", file_name);
+        printf("fopen: ERROR!!!\n You may have entered the wrong file name!\n");
         assert(0);
         return;
     }
@@ -121,6 +121,9 @@ void RunTests(const char *file_name)
 bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
                              RootsOfTrinomial *ref_roots, FILE *ptr_to_test)
 {
+    assert(ref_trinomial != nullptr);
+    assert(ref_roots != nullptr);
+    assert(ptr_to_test != nullptr);
 
     int check_correct_numbers_test = 0;
 
@@ -144,6 +147,9 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
 
 double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)
 {
+    assert(ref_roots != nullptr);
+    assert(ptr_to_test != nullptr);
+
     double temp = NAN; //temporary variable
     int scanf_correctness_check_result = 0; //variable that checks the correctness of reading from the file
     scanf_correctness_check_result = fscanf(ptr_to_test, "%lg", &temp);
@@ -158,6 +164,7 @@ double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)
 
 void PrintEquation(const SquareTrinomialCoef *correct_trinomial)
 {
+    assert(correct_trinomial != nullptr);
     printf("%s EQUATION: %lg * x^2 + %lg * x + %lg\n %s",
            ESCRED,
            correct_trinomial->senior_cf,

@@ -34,7 +34,7 @@ bool CheckIfTestNeedToDo(int argc, const char* argv[]);
  *@brief Check if the file name is correct
  *
  *@param [in] str - file name pointer
- *@return if the file extension if .txt
+ *@return if the file extension is .txt
  */
 bool CheckFile (const char *str);
 
