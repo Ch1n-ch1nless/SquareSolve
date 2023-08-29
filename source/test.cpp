@@ -123,7 +123,7 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
 
     int check_correct_numbers_test = 0;
 
-    READ_DOUBLE_FROM_FILE(RefTrinomial, senior_cf) // сразу return из функции по ошибке
+    READ_DOUBLE_FROM_FILE(RefTrinomial, senior_cf) //immediately return from function by mistake
     READ_DOUBLE_FROM_FILE(RefTrinomial, second_cf)
     READ_DOUBLE_FROM_FILE(RefTrinomial, free_term)
     READ_DOUBLE_FROM_FILE(RefRoots,     first)
@@ -132,34 +132,12 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
     int Temp = 0;
     int scanf_correctness_check_result = fscanf(ptr_to_test, "%d", &Temp);
     if (scanf_correctness_check_result == EOF) {
-        //assert(false && "Error! The program can't read the var!\n");
         return 0;
     }
     check_correct_numbers_test++;
-    switch(Temp)
-    {
-        case(-1):
-            *CorrectNumberOfRoots = INFINITE_ROOTS_QUANTITY;
-            break;
 
-        case(0):
-            *CorrectNumberOfRoots = NO_ROOTS;
-            break;
+    *CorrectNumberOfRoots = (EquationRootsQuantity) Temp;
 
-        case(1):
-            *CorrectNumberOfRoots = ONE_ROOT;
-            break;
-
-        case(2):
-            *CorrectNumberOfRoots = TWO_ROOTS;
-            break;
-
-        default:
-            printf("Ooops, something goes wrong!\n");
-            assert(false);
-            break;
-
-    }
     return check_correct_numbers_test == 6;
 }
 

@@ -37,7 +37,7 @@ void PrintResult(const EquationRootsQuantity quantity, const RootsOfTrinomial Ro
 
 void ShowInstructionForUser()
 {
-    printf("# SolveSquareEquation program version 1.12\n"
+    printf("# SolveSquareEquation program version 1.13\n"
            "# Directed by Aleksandrov Oleg\n\n"
            "Hello, you have launched a program to solve the square equation."
            "This program finds roots up to %d characters!\n"
