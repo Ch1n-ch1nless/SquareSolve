@@ -9,9 +9,9 @@ In this guide, the author shows the program launch in Windows.
 If you want to know, how install program on other OS, write me in <a href="https://t.me/Chin_chinless" target="_blank">telegram</a>
 
 1) Install files from github.
-   '''
+   ```
    git clone https://github.com/Ch1n-ch1nless/SquareSolve.git
-   '''
+   ```
 2) Open the project folder in the console (Example: On windows my project is in:)
    <img src="./images/path.png" width="100%">
 3) Write in terminal "make"! Example:
