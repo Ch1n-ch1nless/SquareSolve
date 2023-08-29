@@ -7,8 +7,7 @@ static const char* DEFAULT = "\033[0m";
 
 
 #define READ_DOUBLE_FROM_FILE(struct_ptr, field_name)                               \
-do                                                                                  \
-{                                                                                   \
+do {                                                                                \
     int prev_correct_numbers_test = check_correct_numbers_test;                     \
     struct_ptr->field_name = ReadNumber(ptr_to_test, &check_correct_numbers_test);  \
     if (prev_correct_numbers_test == check_correct_numbers_test)                    \
