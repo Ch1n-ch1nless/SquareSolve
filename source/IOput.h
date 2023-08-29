@@ -53,4 +53,9 @@ void PrintResult(const EquationRootsQuantity CountOfRoots, const RootsOfTrinomia
  */
 double GetInput(char name_of_CF[], const char symbol);
 
+/**
+ *@brief clear input buffer
+ */
+void clearBUF();
+
 #endif // IOPUT_H_INCLUDED

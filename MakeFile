@@ -8,16 +8,19 @@ CFLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal
 	   -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla\
 	   -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 
-CPP = $(wildcard *.cpp)
-OBJ = $(patsubst %.cpp, %.o, $(CPP))
+OBJ_DIR = ./object/
+SRC_DIR = ./source/
+
+SRC = $(wildcard $(SRC_DIR)*.cpp)
+OBJ = $(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o, $(SRC))
 
 all: compile
 
 compile: $(OBJ)
 	$(CC) $(OBJ) -o aboba
 
-%.o : %.cpp
-	@$(CC) -c $< -o $@
+$(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm $(OBJ)

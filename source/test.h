@@ -9,9 +9,6 @@
 #include <TXLib.h>
 #include "struct.h"
 
-/// Number of tests
-const int NUMBER_OF_TESTS = 10;
-
 /**
  *
  *@brief check the correctness of the SolveSquareEquation()
@@ -44,7 +41,7 @@ void RunTests(const char *file_name);
  *@param [in] FILE - file pointer
  *
  */
-void ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
+bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
                              EquationRootsQuantity *CorrectNumberOfRoots,
                              RootsOfTrinomial *RefRoots,
                              FILE *ptr_to_test);
@@ -55,7 +52,7 @@ void ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial,
  *@param [in] ptr_to_test - file pointer
  *@return number
  */
-double ReadNumber(FILE *ptr_to_test);
+double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test);
 
 /**
  *

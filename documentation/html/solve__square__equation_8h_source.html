@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: solve_square_equation.h Source File</title>
+<title>SquareSolve: source/solve_square_equation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SquareSolve
    </div>
   </td>
  </tr>
@@ -45,7 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,12 +59,17 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">solve_square_equation.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SOLVESQUAREEQUATION_H_INCLUDED</span></div>
+<a href="solve__square__equation_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SOLVESQUAREEQUATION_H_INCLUDED</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define SOLVESQUAREEQUATION_H_INCLUDED</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
@@ -74,20 +78,26 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="struct_8h.html">struct.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> EPS = 1e-7;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;EquationRootsQuantity SolveSquareEquation(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *UsersTrinomial, <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;EquationRootsQuantity SolveLinearEquation(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *UsersTrinomial, <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">bool</span> CompareDouble(<span class="keyword">const</span> <span class="keywordtype">double</span> number1, <span class="keyword">const</span> <span class="keywordtype">double</span> number2);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span> SortRoots(<a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">bool</span> IsZero(<span class="keyword">const</span> <span class="keywordtype">double</span> number);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SOLVESQUAREEQUATION_H_INCLUDED</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="solve__square__equation_8h.html#afe01386a82fedc016455a43c20280a97">   14</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="solve__square__equation_8h.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 1e-7;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;EquationRootsQuantity <a class="code" href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b">SolveSquareEquation</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *UsersTrinomial, <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;EquationRootsQuantity <a class="code" href="solve__square__equation_8h.html#a06a0f9242080153803d1ee27544dfda0">SolveLinearEquation</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *UsersTrinomial, <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="solve__square__equation_8h.html#a202e32e63779b54ac953c8282942f8b4">CompareDouble</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> number1, <span class="keyword">const</span> <span class="keywordtype">double</span> number2);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="solve__square__equation_8h.html#ae8d322f4c64cf8223ed7f56e3f52d6c8">SortRoots</a>(<a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *Root);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="solve__square__equation_8h.html#adef6da3df72d6e1e028ba415233ae5d0">IsZero</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> number);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SOLVESQUAREEQUATION_H_INCLUDED</span></div>
+<div class="ttc" id="asolve__square__equation_8h_html_a06a0f9242080153803d1ee27544dfda0"><div class="ttname"><a href="solve__square__equation_8h.html#a06a0f9242080153803d1ee27544dfda0">SolveLinearEquation</a></div><div class="ttdeci">EquationRootsQuantity SolveLinearEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root)</div><div class="ttdoc">Solve linear equation.</div><div class="ttdef"><b>Definition:</b> solve_square_equation.cpp:36</div></div>
+<div class="ttc" id="asolve__square__equation_8h_html_a06a91d1e8380821b7bdcbc9b93d0530b"><div class="ttname"><a href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b">SolveSquareEquation</a></div><div class="ttdeci">EquationRootsQuantity SolveSquareEquation(const SquareTrinomialCoef *UsersTrinomial, RootsOfTrinomial *Root)</div><div class="ttdoc">Solve square equation.</div><div class="ttdef"><b>Definition:</b> solve_square_equation.cpp:3</div></div>
+<div class="ttc" id="asolve__square__equation_8h_html_a202e32e63779b54ac953c8282942f8b4"><div class="ttname"><a href="solve__square__equation_8h.html#a202e32e63779b54ac953c8282942f8b4">CompareDouble</a></div><div class="ttdeci">bool CompareDouble(const double number1, const double number2)</div><div class="ttdef"><b>Definition:</b> compare.cpp:3</div></div>
+<div class="ttc" id="asolve__square__equation_8h_html_adef6da3df72d6e1e028ba415233ae5d0"><div class="ttname"><a href="solve__square__equation_8h.html#adef6da3df72d6e1e028ba415233ae5d0">IsZero</a></div><div class="ttdeci">bool IsZero(const double number)</div><div class="ttdoc">check the number for equality with 0</div><div class="ttdef"><b>Definition:</b> compare.cpp:8</div></div>
+<div class="ttc" id="asolve__square__equation_8h_html_ae8d322f4c64cf8223ed7f56e3f52d6c8"><div class="ttname"><a href="solve__square__equation_8h.html#ae8d322f4c64cf8223ed7f56e3f52d6c8">SortRoots</a></div><div class="ttdeci">void SortRoots(RootsOfTrinomial *Root)</div><div class="ttdoc">regulates roots in ascending order</div><div class="ttdef"><b>Definition:</b> solve_square_equation.cpp:60</div></div>
+<div class="ttc" id="asolve__square__equation_8h_html_afe01386a82fedc016455a43c20280a97"><div class="ttname"><a href="solve__square__equation_8h.html#afe01386a82fedc016455a43c20280a97">EPS</a></div><div class="ttdeci">const double EPS</div><div class="ttdoc">Accuracy of the comparison.</div><div class="ttdef"><b>Definition:</b> solve_square_equation.h:14</div></div>
 <div class="ttc" id="astruct_8h_html"><div class="ttname"><a href="struct_8h.html">struct.h</a></div></div>
 <div class="ttc" id="astruct_roots_of_trinomial_html"><div class="ttname"><a href="struct_roots_of_trinomial.html">RootsOfTrinomial</a></div><div class="ttdoc">struct 'RootsOfTrinomial' is is the structure that contains the value of roots</div><div class="ttdef"><b>Definition:</b> struct.h:23</div></div>
 <div class="ttc" id="astruct_square_trinomial_coef_html"><div class="ttname"><a href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a></div><div class="ttdoc">struct 'SquareTrinomialCoef' is is the structure that contains the value of coefficients</div><div class="ttdef"><b>Definition:</b> struct.h:15</div></div>

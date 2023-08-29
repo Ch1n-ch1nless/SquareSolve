@@ -1,5 +1,5 @@
-\hypertarget{_i_oput_8h}{}\doxysection{IOput.\+h File Reference}
-\label{_i_oput_8h}\index{IOput.h@{IOput.h}}
+\hypertarget{_i_oput_8h}{}\doxysection{source/\+IOput.h File Reference}
+\label{_i_oput_8h}\index{source/IOput.h@{source/IOput.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$TXLib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
@@ -14,7 +14,10 @@ void \mbox{\hyperlink{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}{Read\+Square
 void \mbox{\hyperlink{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}{Print\+Result}} (const Equation\+Roots\+Quantity Count\+Of\+Roots, const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} Root)
 \begin{DoxyCompactList}\small\item\em Print the number of roots and their value. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}{Get\+Input}} (char name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]}, const char symbol)
-\begin{DoxyCompactList}\small\item\em Read coefficient value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read coefficient value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}\label{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}} 
+void \mbox{\hyperlink{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}{clear\+BUF}} ()
+\begin{DoxyCompactList}\small\item\em clear input buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,10 +41,10 @@ Read coefficient value.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em name\+\_\+of\+\_\+\+CF} & name of coefficient \\
 \hline
-\mbox{\texttt{ in}}  & {\em symbol} & short name of coefficient (for example\+: A = senior coefficient)\\
+\mbox{\texttt{ in}}  & {\em symbol} & short name of coefficient (for example\+: A = senior coefficient) Function prints what coefficient value the user should enter. Read the value of coefficient and return this. \\
 \hline
 \end{DoxyParams}
-Function prints what coefficient value the user should enter. Read the value of coefficient and return this. \begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Returns}
 value of coefficient 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}\label{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}} 
@@ -58,9 +61,9 @@ Function accepts the structure \textquotesingle{}\mbox{\hyperlink{struct_roots_o
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em Count\+Of\+Roots} & -\/ enum Equation\+Roots\+Quantity \\
+\mbox{\texttt{ out}}  & {\em Count\+Of\+Roots} & -\/ enum Equation\+Roots\+Quantity \\
 \hline
-\mbox{\texttt{ in}}  & {\em Root} & -\/ structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} \\
+\mbox{\texttt{ out}}  & {\em Root} & -\/ structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}\label{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}} 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: IOput.h File Reference</title>
+<title>SquareSolve: source/IOput.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SquareSolve
    </div>
   </td>
  </tr>
@@ -59,6 +59,10 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -89,6 +93,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_o
 <tr class="memitem:aa0cb9d63c8150c3b95b236c9179c165d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_oput_8h.html#aa0cb9d63c8150c3b95b236c9179c165d">GetInput</a> (char name_of_CF[], const char symbol)</td></tr>
 <tr class="memdesc:aa0cb9d63c8150c3b95b236c9179c165d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read coefficient value.  <a href="_i_oput_8h.html#aa0cb9d63c8150c3b95b236c9179c165d">More...</a><br /></td></tr>
 <tr class="separator:aa0cb9d63c8150c3b95b236c9179c165d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766d243dc775e4827c254b343572b6f9"><td class="memItemLeft" align="right" valign="top"><a id="a766d243dc775e4827c254b343572b6f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_oput_8h.html#a766d243dc775e4827c254b343572b6f9">clearBUF</a> ()</td></tr>
+<tr class="memdesc:a766d243dc775e4827c254b343572b6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear input buffer <br /></td></tr>
+<tr class="separator:a766d243dc775e4827c254b343572b6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -128,11 +136,11 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name_of_CF</td><td>name of coefficient </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">symbol</td><td>short name of coefficient (for example: A = senior coefficient)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">symbol</td><td>short name of coefficient (for example: A = senior coefficient) Function prints what coefficient value the user should enter. Read the value of coefficient and return this. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Function prints what coefficient value the user should enter. Read the value of coefficient and return this. </p><dl class="section return"><dt>Returns</dt><dd>value of coefficient </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>value of coefficient </dd></dl>
 
 </div>
 </div>
@@ -166,8 +174,8 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Function accepts the structure '<a class="el" href="struct_roots_of_trinomial.html" title="struct &#39;RootsOfTrinomial&#39; is is the structure that contains the value of roots">RootsOfTrinomial</a>' and enum EquationRootsQuantity CountOfRoots. If CountOfRoots = NO_ROOTS or INFINITE_QUANTITY_ROOTS, does NOT print roots. If CountOfRoots = ONE_ROOT, print 1 root. If CountOfRoots = TWO_ROOTS, print 2 roots.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">CountOfRoots</td><td>- enum EquationRootsQuantity </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Root</td><td>- structure '<a class="el" href="struct_roots_of_trinomial.html" title="struct &#39;RootsOfTrinomial&#39; is is the structure that contains the value of roots">RootsOfTrinomial</a>' </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">CountOfRoots</td><td>- enum EquationRootsQuantity </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Root</td><td>- structure '<a class="el" href="struct_roots_of_trinomial.html" title="struct &#39;RootsOfTrinomial&#39; is is the structure that contains the value of roots">RootsOfTrinomial</a>' </td></tr>
   </table>
   </dd>
 </dl>

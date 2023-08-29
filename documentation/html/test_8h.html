@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: test.h File Reference</title>
+<title>SquareSolve: source/test.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SquareSolve
    </div>
   </td>
  </tr>
@@ -59,11 +59,14 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">test.h File Reference</div>  </div>
 </div><!--header-->
@@ -79,28 +82,21 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab6f8c7ee7804321cf5d9c491f28eaf8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">CheckCorrectnessOfSolve</a> (const <a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial, EquationRootsQuantity CorrectNumberOfRoots, const <a class="el" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *CorrectRoots)</td></tr>
-<tr class="memdesc:ab6f8c7ee7804321cf5d9c491f28eaf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the correctness of the SolveSquareEquation()  <a href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">More...</a><br /></td></tr>
+<tr class="memdesc:ab6f8c7ee7804321cf5d9c491f28eaf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the correctness of the <a class="el" href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b" title="Solve square equation.">SolveSquareEquation()</a>  <a href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">More...</a><br /></td></tr>
 <tr class="separator:ab6f8c7ee7804321cf5d9c491f28eaf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c1d6ea845542c163758f660dcc928d"><td class="memItemLeft" align="right" valign="top"><a id="a21c1d6ea845542c163758f660dcc928d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a> (const char *file_name)</td></tr>
 <tr class="memdesc:a21c1d6ea845542c163758f660dcc928d"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs tests <br /></td></tr>
 <tr class="separator:a21c1d6ea845542c163758f660dcc928d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d88912033f064d13c3ce97cdc3c0d65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a1d88912033f064d13c3ce97cdc3c0d65">ReadCorrectSqrTrinomial</a> (<a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *RefTrinomial, EquationRootsQuantity *CorrectNumberOfRoots, <a class="el" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *RefRoots, FILE *ptr_to_test)</td></tr>
-<tr class="memdesc:a1d88912033f064d13c3ce97cdc3c0d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from file coefficients of square trinomial and its roots.  <a href="test_8h.html#a1d88912033f064d13c3ce97cdc3c0d65">More...</a><br /></td></tr>
-<tr class="separator:a1d88912033f064d13c3ce97cdc3c0d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f0f567942854d35204a646c9e855e11"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a7f0f567942854d35204a646c9e855e11">ReadNumber</a> (FILE *ptr_to_test)</td></tr>
-<tr class="memdesc:a7f0f567942854d35204a646c9e855e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the number from file.  <a href="test_8h.html#a7f0f567942854d35204a646c9e855e11">More...</a><br /></td></tr>
-<tr class="separator:a7f0f567942854d35204a646c9e855e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7b14d08437b3acd97462755b04f718"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#ade7b14d08437b3acd97462755b04f718">ReadCorrectSqrTrinomial</a> (<a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *RefTrinomial, EquationRootsQuantity *CorrectNumberOfRoots, <a class="el" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *RefRoots, FILE *ptr_to_test)</td></tr>
+<tr class="memdesc:ade7b14d08437b3acd97462755b04f718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from file coefficients of square trinomial and its roots.  <a href="test_8h.html#ade7b14d08437b3acd97462755b04f718">More...</a><br /></td></tr>
+<tr class="separator:ade7b14d08437b3acd97462755b04f718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c471025c69fdded15b48d061d8c2407"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a0c471025c69fdded15b48d061d8c2407">ReadNumber</a> (FILE *ptr_to_test, int *check_correct_numbers_test)</td></tr>
+<tr class="memdesc:a0c471025c69fdded15b48d061d8c2407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the number from file.  <a href="test_8h.html#a0c471025c69fdded15b48d061d8c2407">More...</a><br /></td></tr>
+<tr class="separator:a0c471025c69fdded15b48d061d8c2407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6012eeab2352532ca8e313d21d4f913e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">PrintEquation</a> (const <a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial)</td></tr>
 <tr class="memdesc:a6012eeab2352532ca8e313d21d4f913e"><td class="mdescLeft">&#160;</td><td class="mdescRight">print square equation  <a href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">More...</a><br /></td></tr>
 <tr class="separator:a6012eeab2352532ca8e313d21d4f913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a7a6e478e2a99121b28c9629bf4711262"><td class="memItemLeft" align="right" valign="top"><a id="a7a6e478e2a99121b28c9629bf4711262"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a7a6e478e2a99121b28c9629bf4711262">NUMBER_OF_TESTS</a> = 10</td></tr>
-<tr class="memdesc:a7a6e478e2a99121b28c9629bf4711262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tests. <br /></td></tr>
-<tr class="separator:a7a6e478e2a99121b28c9629bf4711262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab6f8c7ee7804321cf5d9c491f28eaf8a"></a>
@@ -135,7 +131,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
       </table>
 </div><div class="memdoc">
 
-<p>check the correctness of the SolveSquareEquation() </p>
+<p>check the correctness of the <a class="el" href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b" title="Solve square equation.">SolveSquareEquation()</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">CorrectTrinomial</td><td>- structure in which coefficient values are found </td></tr>
@@ -144,7 +140,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<p>Function starts SolveSquareEquation() and gets the number of roots and their values. Then check these roots with correct roots. </p><dl class="section return"><dt>Returns</dt><dd>roots from SolveSquareEquation() == CorrectRoots </dd></dl>
+<p>Function starts <a class="el" href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b" title="Solve square equation.">SolveSquareEquation()</a> and gets the number of roots and their values. Then check these roots with correct roots. </p><dl class="section return"><dt>Returns</dt><dd>roots from <a class="el" href="solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b" title="Solve square equation.">SolveSquareEquation()</a> == CorrectRoots </dd></dl>
 
 </div>
 </div>
@@ -174,14 +170,14 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 
 </div>
 </div>
-<a id="a1d88912033f064d13c3ce97cdc3c0d65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d88912033f064d13c3ce97cdc3c0d65">&#9670;&nbsp;</a></span>ReadCorrectSqrTrinomial()</h2>
+<a id="ade7b14d08437b3acd97462755b04f718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7b14d08437b3acd97462755b04f718">&#9670;&nbsp;</a></span>ReadCorrectSqrTrinomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ReadCorrectSqrTrinomial </td>
+          <td class="memname">bool ReadCorrectSqrTrinomial </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *&#160;</td>
           <td class="paramname"><em>RefTrinomial</em>, </td>
@@ -218,14 +214,15 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
     <tr><td class="paramdir">[out]</td><td class="paramname"><a class="el" href="struct_square_trinomial_coef.html" title="struct &#39;SquareTrinomialCoef&#39; is is the structure that contains the value of coefficients">SquareTrinomialCoef</a></td><td>*RefTrinomial - structure in which coefficient values are found </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">CorrectNumberOfRoots</td><td>- correct root number </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">RefRoots</td><td>- structure in which correct roots are found </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">FILE</td><td>- file pointer </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a7f0f567942854d35204a646c9e855e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f0f567942854d35204a646c9e855e11">&#9670;&nbsp;</a></span>ReadNumber()</h2>
+<a id="a0c471025c69fdded15b48d061d8c2407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c471025c69fdded15b48d061d8c2407">&#9670;&nbsp;</a></span>ReadNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +231,18 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
           <td class="memname">double ReadNumber </td>
           <td>(</td>
           <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>ptr_to_test</em></td><td>)</td>
+          <td class="paramname"><em>ptr_to_test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>check_correct_numbers_test</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -22,9 +22,7 @@ double GetInput(char name_of_cf[], const char symbol)
     printf("Enter the value of the %s: %s%c\033[0m = ", name_of_cf, YEL, symbol); //read the coefficient
     scanf_correctness_check_result = scanf("%lg", &temp);
     while (scanf_correctness_check_result == 0) {
-        int c = 0;
-        while((c = getchar()) != '\n')
-            ;
+        clearBUF();
 
         printf("\nOops, you entered the coefficent wrong, try again!\n"
                "Enter the value of the %s: %s%c\033[0m = ", name_of_cf, YEL,  symbol);
@@ -35,4 +33,10 @@ double GetInput(char name_of_cf[], const char symbol)
     assert((isfinite(temp)) && "temp = INFINITY");
 
     return temp;
+}
+
+void clearBUF() {
+    int c = 0;
+    while((c = getchar()) != '\n')
+        ;
 }

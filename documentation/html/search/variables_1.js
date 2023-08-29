@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['number_5fof_5ftests_44',['NUMBER_OF_TESTS',['../test_8h.html#a7a6e478e2a99121b28c9629bf4711262',1,'test.h']]]
+  ['first_57',['first',['../struct_roots_of_trinomial.html#a4edae6344ee6306c1bc9996f86046235',1,'RootsOfTrinomial']]],
+  ['free_5fterm_58',['free_term',['../struct_square_trinomial_coef.html#a451e7acb3b243246c9163319abb9b223',1,'SquareTrinomialCoef']]]
 ];

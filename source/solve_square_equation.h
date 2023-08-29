@@ -1,4 +1,4 @@
-///@file SolveSquareEquation.h
+///@file solve_square_equation.h
 #ifndef SOLVESQUAREEQUATION_H_INCLUDED
 
 #define SOLVESQUAREEQUATION_H_INCLUDED
@@ -9,9 +9,7 @@
 #include "struct.h"
 
 /**
- *
  *@brief Accuracy of the comparison
- *
  */
 const double EPS = 1e-7;
 

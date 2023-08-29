@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: test.h Source File</title>
+<title>SquareSolve: source/test.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SquareSolve
    </div>
   </td>
  </tr>
@@ -45,7 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,46 +59,48 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TEST_H_INCLUDED</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define TEST_H_INCLUDED</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;TXLib.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="struct_8h.html">struct.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="test_8h.html#a7a6e478e2a99121b28c9629bf4711262">   12</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="test_8h.html#a7a6e478e2a99121b28c9629bf4711262">NUMBER_OF_TESTS</a> = 10;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">CheckCorrectnessOfSolve</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            EquationRootsQuantity CorrectNumberOfRoots,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                            <span class="keyword">const</span> <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *CorrectRoots);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file_name);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="test_8h.html#a1d88912033f064d13c3ce97cdc3c0d65">ReadCorrectSqrTrinomial</a>(<a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *RefTrinomial,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                             EquationRootsQuantity *CorrectNumberOfRoots,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                             <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *RefRoots,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                             FILE *ptr_to_test);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">double</span> <a class="code" href="test_8h.html#a7f0f567942854d35204a646c9e855e11">ReadNumber</a>(FILE *ptr_to_test);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">PrintEquation</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TEST_H_INCLUDED</span></div>
+<a href="test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef TEST_H_INCLUDED</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define TEST_H_INCLUDED</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;TXLib.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="struct_8h.html">struct.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">CheckCorrectnessOfSolve</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            EquationRootsQuantity CorrectNumberOfRoots,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="keyword">const</span> <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *CorrectRoots);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file_name);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="test_8h.html#ade7b14d08437b3acd97462755b04f718">ReadCorrectSqrTrinomial</a>(<a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *RefTrinomial,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                             EquationRootsQuantity *CorrectNumberOfRoots,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                             <a class="code" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *RefRoots,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                             FILE *ptr_to_test);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">double</span> <a class="code" href="test_8h.html#a0c471025c69fdded15b48d061d8c2407">ReadNumber</a>(FILE *ptr_to_test, <span class="keywordtype">int</span> *check_correct_numbers_test);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">PrintEquation</a>(<span class="keyword">const</span> <a class="code" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *CorrectTrinomial);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TEST_H_INCLUDED</span></div>
 <div class="ttc" id="astruct_8h_html"><div class="ttname"><a href="struct_8h.html">struct.h</a></div></div>
 <div class="ttc" id="astruct_roots_of_trinomial_html"><div class="ttname"><a href="struct_roots_of_trinomial.html">RootsOfTrinomial</a></div><div class="ttdoc">struct 'RootsOfTrinomial' is is the structure that contains the value of roots</div><div class="ttdef"><b>Definition:</b> struct.h:23</div></div>
 <div class="ttc" id="astruct_square_trinomial_coef_html"><div class="ttname"><a href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a></div><div class="ttdoc">struct 'SquareTrinomialCoef' is is the structure that contains the value of coefficients</div><div class="ttdef"><b>Definition:</b> struct.h:15</div></div>
-<div class="ttc" id="atest_8h_html_a1d88912033f064d13c3ce97cdc3c0d65"><div class="ttname"><a href="test_8h.html#a1d88912033f064d13c3ce97cdc3c0d65">ReadCorrectSqrTrinomial</a></div><div class="ttdeci">void ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial, EquationRootsQuantity *CorrectNumberOfRoots, RootsOfTrinomial *RefRoots, FILE *ptr_to_test)</div><div class="ttdoc">Read from file coefficients of square trinomial and its roots.</div><div class="ttdef"><b>Definition:</b> test.cpp:108</div></div>
-<div class="ttc" id="atest_8h_html_a21c1d6ea845542c163758f660dcc928d"><div class="ttname"><a href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a></div><div class="ttdeci">void RunTests(const char *file_name)</div><div class="ttdoc">runs tests</div><div class="ttdef"><b>Definition:</b> test.cpp:83</div></div>
-<div class="ttc" id="atest_8h_html_a6012eeab2352532ca8e313d21d4f913e"><div class="ttname"><a href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">PrintEquation</a></div><div class="ttdeci">void PrintEquation(const SquareTrinomialCoef *CorrectTrinomial)</div><div class="ttdoc">print square equation</div><div class="ttdef"><b>Definition:</b> test.cpp:464</div></div>
-<div class="ttc" id="atest_8h_html_a7a6e478e2a99121b28c9629bf4711262"><div class="ttname"><a href="test_8h.html#a7a6e478e2a99121b28c9629bf4711262">NUMBER_OF_TESTS</a></div><div class="ttdeci">const int NUMBER_OF_TESTS</div><div class="ttdoc">Number of tests.</div><div class="ttdef"><b>Definition:</b> test.h:12</div></div>
-<div class="ttc" id="atest_8h_html_a7f0f567942854d35204a646c9e855e11"><div class="ttname"><a href="test_8h.html#a7f0f567942854d35204a646c9e855e11">ReadNumber</a></div><div class="ttdeci">double ReadNumber(FILE *ptr_to_test)</div><div class="ttdoc">Read the number from file.</div><div class="ttdef"><b>Definition:</b> test.cpp:151</div></div>
-<div class="ttc" id="atest_8h_html_ab6f8c7ee7804321cf5d9c491f28eaf8a"><div class="ttname"><a href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">CheckCorrectnessOfSolve</a></div><div class="ttdeci">int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial, EquationRootsQuantity CorrectNumberOfRoots, const RootsOfTrinomial *CorrectRoots)</div><div class="ttdoc">check the correctness of the SolveSquareEquation()</div><div class="ttdef"><b>Definition:</b> test.cpp:8</div></div>
+<div class="ttc" id="atest_8h_html_a0c471025c69fdded15b48d061d8c2407"><div class="ttname"><a href="test_8h.html#a0c471025c69fdded15b48d061d8c2407">ReadNumber</a></div><div class="ttdeci">double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)</div><div class="ttdoc">Read the number from file.</div><div class="ttdef"><b>Definition:</b> test.cpp:167</div></div>
+<div class="ttc" id="atest_8h_html_a21c1d6ea845542c163758f660dcc928d"><div class="ttname"><a href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a></div><div class="ttdeci">void RunTests(const char *file_name)</div><div class="ttdoc">runs tests</div><div class="ttdef"><b>Definition:</b> test.cpp:96</div></div>
+<div class="ttc" id="atest_8h_html_a6012eeab2352532ca8e313d21d4f913e"><div class="ttname"><a href="test_8h.html#a6012eeab2352532ca8e313d21d4f913e">PrintEquation</a></div><div class="ttdeci">void PrintEquation(const SquareTrinomialCoef *CorrectTrinomial)</div><div class="ttdoc">print square equation</div><div class="ttdef"><b>Definition:</b> test.cpp:182</div></div>
+<div class="ttc" id="atest_8h_html_ab6f8c7ee7804321cf5d9c491f28eaf8a"><div class="ttname"><a href="test_8h.html#ab6f8c7ee7804321cf5d9c491f28eaf8a">CheckCorrectnessOfSolve</a></div><div class="ttdeci">int CheckCorrectnessOfSolve(const SquareTrinomialCoef *CorrectTrinomial, EquationRootsQuantity CorrectNumberOfRoots, const RootsOfTrinomial *CorrectRoots)</div><div class="ttdoc">check the correctness of the SolveSquareEquation()</div><div class="ttdef"><b>Definition:</b> test.cpp:20</div></div>
+<div class="ttc" id="atest_8h_html_ade7b14d08437b3acd97462755b04f718"><div class="ttname"><a href="test_8h.html#ade7b14d08437b3acd97462755b04f718">ReadCorrectSqrTrinomial</a></div><div class="ttdeci">bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *RefTrinomial, EquationRootsQuantity *CorrectNumberOfRoots, RootsOfTrinomial *RefRoots, FILE *ptr_to_test)</div><div class="ttdoc">Read from file coefficients of square trinomial and its roots.</div><div class="ttdef"><b>Definition:</b> test.cpp:120</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
