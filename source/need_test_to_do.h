@@ -1,7 +1,7 @@
 ///@file main.h
 
-#ifndef MAIN_H_INCLUDED
-#define MAIN_H_INCLUDED
+#ifndef NEED_TEST_TO_DO_H_INCLUDED
+#define NEED_TEST_TO_DO_H_INCLUDED
 
 #include <string>
 #include "IOput.h"
@@ -38,4 +38,4 @@ bool CheckIfTestNeedToDo(int argc, const char* argv[]);
  */
 bool CheckFile (const char *str);
 
-#endif // MAIN_H_INCLUDED
+#endif // NEED_TEST_TO_DO_H_INCLUDED

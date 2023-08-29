@@ -1,11 +1,7 @@
 #include "IOput.h"
+#include "colors.h"
 
-static const char* ESCYELLOW = "\033[0;33m";
-static const char* ESCRED = "\033[0;31m";
-static const char* ESCDEFAULT = "\033[0m";
-static const char* ESCGREEN = "\033[0;32m";
-
-#define REDASSERT(str) "\033[0;31m" %str "\033[0m"
+#define REDASSERT(str) "\033[0;31m" #str "\033[0m"
 
 void PrintResult(const RootsOfTrinomial root) //function which print result of program
 {

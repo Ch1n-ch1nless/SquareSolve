@@ -17,32 +17,22 @@ double GetNumber(char name_of_cf[], const char symbol)
 {
     double temp = 0; //temporary variable
     int _minus = 1;
-    bool check_symbol = true;
+    bool check_space_or_tab = false;
     bool scanf_correctness_check_result = false; //value which check the correctness of input
 
     printf("Enter the value of the %s: %s%c%s = ",
            name_of_cf, ESCYELLOW, symbol, ESCDEFAULT); //read the coefficient
     while (!scanf_correctness_check_result) {
-        int check_space_or_tab = false;
-        int count_number = 0;
+        bool check_symbol = true;
         int c = 0;
         while ((c = getchar()) != '\n') {
-            if ('0' <= c && c <= '9') {
-                if (count_number < 1) {
-                    int x = c - '0';
-                    temp *= 10;
-                    temp += x;
-                    if (check_space_or_tab) {
-                        count_number++;
-                        check_space_or_tab = false;
-                    }
-                } else {
-                    check_symbol = false;
-                    break;
-                }
+            if ('0' <= c && c <= '9' && !check_space_or_tab) {
+                int x = c - '0';
+                temp *= 10;
+                temp += x;
             } else if (c == '-' && _minus == 1) {
                 _minus = -1;
-            } else if ((c == ' ' or c == '\t') && count_number <= 1) {
+            } else if ((c == ' ' or c == '\t') && check_number) {
                 check_space_or_tab = true;
             }else {
                 check_symbol = false;

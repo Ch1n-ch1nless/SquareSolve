@@ -1,7 +1,7 @@
 ///@file solve_square_equation.h
-#ifndef SOLVESQUAREEQUATION_H_INCLUDED
+#ifndef SOLVE_SQUARE_EQUATION_H_INCLUDED
 
-#define SOLVESQUAREEQUATION_H_INCLUDED
+#define SOLVE_SQUARE_EQUATION_H_INCLUDED
 
 #include <assert.h>
 #include <math.h>
@@ -79,4 +79,4 @@ void SortRoots(RootsOfTrinomial *root);
 bool IsZero(const double number);
 
 
-#endif // SOLVESQUAREEQUATION_H_INCLUDED
+#endif // SOLVE_SQUARE_EQUATION_H_INCLUDED

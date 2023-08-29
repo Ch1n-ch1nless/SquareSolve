@@ -1,9 +1,6 @@
 #include "test.h"
 #include "solve_square_equation.h"
-
-static const char* ESCRED = "\033[0;31m";
-static const char* ESCGREEN = "\033[0;32m";
-static const char* ESCDEFAULT = "\033[0m";
+#include "colors.h"
 
 
 #define READ_DOUBLE_FROM_FILE(struct_ptr, field_name)                               \
@@ -147,8 +144,8 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
 
 double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test)
 {
-    assert(ref_roots != nullptr);
     assert(ptr_to_test != nullptr);
+    assert(check_correct_numbers_test != nullptr);
 
     double temp = NAN; //temporary variable
     int scanf_correctness_check_result = 0; //variable that checks the correctness of reading from the file

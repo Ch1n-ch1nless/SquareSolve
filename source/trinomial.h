@@ -1,6 +1,6 @@
 ///@file trinomial.h
-#ifndef STRUCT_H_INCLUDED
-#define STRUCT_H_INCLUDED
+#ifndef TRINOMIAL_H_INCLUDED
+#define TRINOMIAL_H_INCLUDED
 
 enum EquationRootsQuantity
 {
@@ -26,4 +26,4 @@ struct RootsOfTrinomial
     EquationRootsQuantity number = NO_ROOTS; //!<number of roots
 };
 
-#endif // STRUCT_H_INCLUDED
+#endif // TRINOMIAL_H_INCLUDED
