@@ -16,51 +16,36 @@ void ReadSquareTrinomial(SquareTrinomialCoef *users_trinomial)
 double GetNumber(char name_of_cf[], const char symbol)
 {
     double temp = 0; //temporary variable
-    int _minus = 1;
-    bool check_symbol = true;
     bool scanf_correctness_check_result = false; //value which check the correctness of input
 
     printf("Enter the value of the %s: %s%c%s = ",
            name_of_cf, ESCYELLOW, symbol, ESCDEFAULT); //read the coefficient
     while (!scanf_correctness_check_result) {
-        int check_space_or_tab = false;
-        int count_number = 0;
-        int c = 0;
-        while ((c = getchar()) != '\n') {
-            if ('0' <= c && c <= '9') {
-                if (count_number < 1) {
-                    int x = c - '0';
-                    temp *= 10;
-                    temp += x;
-                    if (check_space_or_tab) {
-                        count_number++;
-                        check_space_or_tab = false;
-                    }
-                } else {
-                    check_symbol = false;
-                    break;
-                }
-            } else if (c == '-' && _minus == 1) {
-                _minus = -1;
-            } else if ((c == ' ' or c == '\t') && count_number <= 1) {
-                check_space_or_tab = true;
-            }else {
-                check_symbol = false;
-                break;
-            }
-        }
-        if (!check_symbol) {
-            ClearBUF();
-            printf("Oops, you have incorrectly entered coefficient!\n");
+        scanf_correctness_check_result = scanf("%lg", &temp);
+        if (!scanf_correctness_check_result) {
+            printf("Oops, you have incorrectly entered coefficients!\n");
             printf("Enter the value of the %s: %s%c%s = ",
                     name_of_cf, ESCYELLOW, symbol, ESCDEFAULT);
-        } else {
-            scanf_correctness_check_result = true;
+            ClearBUF();
+            continue;
+        }
+        int c = 0;
+        while ((c = getchar()) != '\n') {
+            if (c != ' ' && c != '\t') {
+                scanf_correctness_check_result = false;
+                printf("Oops, you have incorrectly entered coefficients!\n");
+                printf("Enter the value of the %s: %s%c%s = ",
+                        name_of_cf, ESCYELLOW, symbol, ESCDEFAULT);
+                ClearBUF();
+                break;
+            } else {
+                scanf_correctness_check_result = true;
+            }
         }
     }
     assert((isnan(temp) == false) && "temp = NAN");
     assert((isfinite(temp)) && "temp = INFINITY");
-    return _minus * temp;
+    return temp;
 }
 
 void ClearBUF() {
