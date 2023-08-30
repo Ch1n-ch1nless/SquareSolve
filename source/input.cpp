@@ -5,15 +5,12 @@ void ReadSquareTrinomial(SquareTrinomialCoef *users_trinomial)
 {
     assert((users_trinomial != nullptr) && "Pointer to polynomial is nullptr!!!");
 
-    char senior_cf[] = "senior coefficient";
-    users_trinomial->senior_cf = GetNumber(senior_cf, 'A');
-    char second_cf[] = "second coefficient";
-    users_trinomial->second_cf = GetNumber(second_cf, 'B');
-    char free_term[] = "free term";
-    users_trinomial->free_term = GetNumber(free_term, 'C');
+    users_trinomial->senior_cf = GetNumber("senior coefficient", 'A');
+    users_trinomial->second_cf = GetNumber("second coefficient", 'B');
+    users_trinomial->free_term = GetNumber("free term", 'C');
 }
 
-double GetNumber(char name_of_cf[], const char symbol)
+double GetNumber(const char name_of_cf[], const char symbol)
 {
     double temp = 0; //temporary variable
     bool scanf_correctness_check_result = false; //value which check the correctness of input
@@ -26,7 +23,7 @@ double GetNumber(char name_of_cf[], const char symbol)
             printf("Oops, you have incorrectly entered coefficients!\n");
             printf("Enter the value of the %s: %s%c%s = ",
                     name_of_cf, ESCYELLOW, symbol, ESCDEFAULT);
-            ClearBUF();
+            ClearBuf();
             continue;
         }
         int c = 0;
@@ -36,7 +33,7 @@ double GetNumber(char name_of_cf[], const char symbol)
                 printf("Oops, you have incorrectly entered coefficients!\n");
                 printf("Enter the value of the %s: %s%c%s = ",
                         name_of_cf, ESCYELLOW, symbol, ESCDEFAULT);
-                ClearBUF();
+                ClearBuf();
                 break;
             } else {
                 scanf_correctness_check_result = true;
@@ -48,7 +45,7 @@ double GetNumber(char name_of_cf[], const char symbol)
     return temp;
 }
 
-void ClearBUF() {
+void ClearBuf() {
     int c = 0;
     while((c = getchar()) != '\n')
         ;

@@ -16,7 +16,7 @@
  * the test program is called.
  *
  */
-const char UNITTEST[] = "--unit_test";
+const char OPTION_UNITTEST[] = "--unit_test";
 
 /**
  * @brief Pointer to string "--help"
@@ -26,12 +26,14 @@ const char UNITTEST[] = "--unit_test";
  * the program show what commands user can enter.
  *
  */
-const char HELP[] = "--help";
+const char OPTION_HELP[] = "--help";
 
 enum FlagsOfMain {
-    nothing = 0,
-    help = 1,
-    test = 2
+    FLAG_NOTHING = 0,
+    FLAG_HELP = 1,
+    FLAG_UNITTEST = 2,
+
+    FLAG_END
 };
 
 /**
@@ -44,7 +46,7 @@ enum FlagsOfMain {
  *
  *Function reads all flags from terminal and returns a variable that will then specify which program to call
  */
-FlagsOfMain ReadFlags(int argc, const char* argv[], const char *file_name);
+FlagsOfMain ReadFlags(int argc, const char* argv[], int *ptr_to_file_name);
 
 /**
  *

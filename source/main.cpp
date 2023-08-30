@@ -2,54 +2,81 @@
 
 int main(int argc, const char* argv[])
 {
-    const char *file_name = "";
+    int ptr_to_file_name = 0;
 
-    FlagsOfMain what_program_run = ReadFlags(argc, argv, file_name);
+    FlagsOfMain what_option_run = ReadFlags(argc, argv, &ptr_to_file_name);
 
-    switch(what_program_run) {
-        case nothing:
+    switch(what_option_run) {
+        case FLAG_NOTHING:
         {
-            ShowInstructionForUser();      //Show the user the instructions for using the program
+            ShowInstructionForUser();                                      //Show the user the instructions for using the program
 
-            SquareTrinomialCoef users_trinomial;     //The User's equation which need to solve
-            RootsOfTrinomial roots_of_trinomial; //The roots of SquareTrinomial
+            SquareTrinomialCoef users_trinomial;                           //The User's equation which need to solve
+            RootsOfTrinomial roots_of_trinomial;                           //The roots of SquareTrinomial
 
-            ReadSquareTrinomial(&users_trinomial);     //Read the coefficients of polynomial
+            ReadSquareTrinomial(&users_trinomial);                         //Read the coefficients of polynomial
             SolveSquareEquation(&users_trinomial, &roots_of_trinomial);    //Solve the square equation
 
-            PrintResult(roots_of_trinomial);    //Print the result of program
-        }
+            PrintResult(roots_of_trinomial);                               //Print the result of program
             break;
+        }
 
-        case help:
+        case FLAG_HELP:
+        {
             ShowHelp();
             break;
+        }
 
-        case test:
-            RunTests(file_name);
+        case FLAG_UNITTEST:
+        {
+            RunTests(argv[ptr_to_file_name]);
             break;
+        }
 
-        default:
+        case FLAG_END:
+        {
             printf("You print incorrect arguments!\n");
             printf("Please, read the guide:\n");
             ShowHelp();
+            break;
+        }
+
+        default:
+        {
+            printf("You print incorrect arguments!\n");
+            printf("Please, read the guide:\n");
+            ShowHelp();
+            break;
+        }
     }
     return 0;
 }
 
-FlagsOfMain ReadFlags(int argc, const char* argv[], const char *file_name)
+
+
+FlagsOfMain ReadFlags(int argc, const char* argv[], int *ptr_to_file_name)
 {
-    int temp_flag = 3;
+    int temp_flag = FLAG_END;
     for (int i = 0; i < argc; i++) {
-        if (!strcmp(argv[i], HELP)) {
-            temp_flag = min(temp_flag, 1);
-        } else if (!strcmp(argv[i], UNITTEST)){
-            temp_flag = min(temp_flag, 2);
-        } else if (CheckFile(argv[i])) {
-            file_name = argv[i];
+        if (!strcmp(argv[i], OPTION_HELP)) {
+            temp_flag = min(temp_flag, (int) FLAG_HELP);
+        } else if (!strcmp(argv[i], OPTION_UNITTEST)){
+            temp_flag = min(temp_flag, (int) FLAG_UNITTEST);
+            if (temp_flag == (int) FLAG_UNITTEST) {
+                i++;
+                if (CheckFile(argv[i])) {
+                    *ptr_to_file_name = i;
+                } else {
+                    temp_flag = FLAG_END;
+                    break;
+                }
+            } else {
+                temp_flag = FLAG_END;
+                break;
+            }
         }
     }
-    if (temp_flag == 3 && argc == 1) {
+    if (temp_flag == FLAG_END && argc == 1) {
         temp_flag = 0;
     }
     return (FlagsOfMain) temp_flag;
@@ -71,8 +98,8 @@ bool CheckFile(const char *str)
     if (last_point_ptr == nullptr) {
         return false;
     } else {
-        const char *Txt = "txt";
-        return (!strcmp(last_point_ptr, Txt));
+        const char *testfile_extension = "txt";
+        return (!strcmp(last_point_ptr, testfile_extension));
     }
 }
 
