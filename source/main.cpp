@@ -2,44 +2,57 @@
 
 int main(int argc, const char* argv[])
 {
-    int need_test = CheckIfTestNeedToDo(argc, argv);
+    const char *file_name = "";
 
-    if (need_test == 0) {
-        ShowInstructionForUser();      //Show the user the instructions for using the program
+    FlagsOfMain what_program_run = ReadFlags(argc, argv, file_name);
 
-        SquareTrinomialCoef users_trinomial;     //The User's equation which need to solve
-        RootsOfTrinomial roots_of_trinomial; //The roots of SquareTrinomial
+    switch(what_program_run) {
+        case nothing:
+        {
+            ShowInstructionForUser();      //Show the user the instructions for using the program
 
-        ReadSquareTrinomial(&users_trinomial);     //Read the coefficients of polynomial
-        SolveSquareEquation(&users_trinomial, &roots_of_trinomial);    //Solve the square equation
+            SquareTrinomialCoef users_trinomial;     //The User's equation which need to solve
+            RootsOfTrinomial roots_of_trinomial; //The roots of SquareTrinomial
 
-        PrintResult(roots_of_trinomial);    //Print the result of program
-    } else if (need_test == 1){
-        if (argc >= 3) {
-            const char *file_name = argv[2];
-            if (CheckFile(file_name)) {
-                RunTests(argv[2]);
-            }
-        } else {
-        printf("You print incorrect arguments!");
+            ReadSquareTrinomial(&users_trinomial);     //Read the coefficients of polynomial
+            SolveSquareEquation(&users_trinomial, &roots_of_trinomial);    //Solve the square equation
+
+            PrintResult(roots_of_trinomial);    //Print the result of program
         }
-    } else {
-        if (!strcmp(argv[1], help)) {
+            break;
+
+        case help:
             ShowHelp();
-        } else {
-            printf("You print incorrect arguments!");
-        }
-    }
+            break;
 
+        case test:
+            RunTests(file_name);
+            break;
+
+        default:
+            printf("You print incorrect arguments!\n");
+            printf("Please, read the guide:\n");
+            ShowHelp();
+    }
     return 0;
 }
 
-int CheckIfTestNeedToDo(int argc, const char* argv[])
+FlagsOfMain ReadFlags(int argc, const char* argv[], const char *file_name)
 {
-    if (argc == 1) {
-        return 0;
+    int temp_flag = 3;
+    for (int i = 0; i < argc; i++) {
+        if (!strcmp(argv[i], HELP)) {
+            temp_flag = min(temp_flag, 1);
+        } else if (!strcmp(argv[i], UNITTEST)){
+            temp_flag = min(temp_flag, 2);
+        } else if (CheckFile(argv[i])) {
+            file_name = argv[i];
+        }
     }
-    return (!strcmp(argv[1], unittest)) ? 1 : -1;
+    if (temp_flag == 3 && argc == 1) {
+        temp_flag = 0;
+    }
+    return (FlagsOfMain) temp_flag;
 }
 
 bool CheckFile(const char *str)

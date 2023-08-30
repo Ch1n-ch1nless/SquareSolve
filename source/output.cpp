@@ -56,10 +56,10 @@ void ShowInstructionForUser()
 
 void ShowHelp()
 {
-    printf("Options:\n"
-           "%s--unit_test UNITtest.txt%s  --  run tests\n"
-           "%s--help%s --  show shows which command line arguments you can enter\n"
-           "%s %s -- solve square equation\n"
+    printf("Usage: aboba.exe [options] file...\n"
+           "Options:\n"
+           "%s--unit_test <file>%s  --  run tests\n"
+           "%s--help%s  --  show shows which command line arguments you can enter\n"
            "to execute these commands enter yellow terminal commands!",
-           ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT);
+           ESCYELLOW, ESCDEFAULT, ESCYELLOW, ESCDEFAULT);
 }

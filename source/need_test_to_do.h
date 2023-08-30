@@ -16,7 +16,7 @@
  * the test program is called.
  *
  */
-const char unittest[] = "--unit_test";
+const char UNITTEST[] = "--unit_test";
 
 /**
  * @brief Pointer to string "--help"
@@ -26,18 +26,15 @@ const char unittest[] = "--unit_test";
  * the program show what commands user can enter.
  *
  */
-const char help[] = "--help";
+const char HELP[] = "--help";
 
-/**
- * @brief Run test.
- *
- * Function, check if need to do unit tests.
- *
- * @param [in] argc
- * @param [in] argv
- * @return if need to do unit tests.
- */
-int CheckIfTestNeedToDo(int argc, const char* argv[]);
+enum FlagsOfMain {
+    nothing = 0,
+    help = 1,
+    test = 2
+};
+
+FlagsOfMain ReadFlags(int argc, const char* argv[], const char *file_name);
 
 /**
  *
