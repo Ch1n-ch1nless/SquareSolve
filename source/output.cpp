@@ -43,7 +43,7 @@ void ShowInstructionForUser()
            "Hello, you have launched a program to solve the square equation.\n"
            "This program finds roots up to %s%d%s characters!\n"
            "%sA%s * x^2 + %sB%s * x + %sC%s = 0, "
-           "where %sA%s, %sB%s, è %sC%s - some%s numbers%s\n"
+           "where %sA%s, %sB%s, and %sC%s - some%s numbers%s\n"
            "The program cannot solve the equation if you enter%s not%s a%s number%s, "
            "but \"pi\", \"exp\", \"4/3\",\"sqrt(2)\", etc.\n"
            "You must enter an integer (0 or -123 or 228 etc.) "
