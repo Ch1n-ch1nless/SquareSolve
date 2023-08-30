@@ -24,7 +24,7 @@ If you want to know, how install program on other OS, write me in <a href="https
    <img src="./images/finish.png" width="100%">
 
 <h3 align = "center"> Options of aboba.exe </h3>
-<img src = "./images/options.png" width = "150%">
+<img src = "./images/Options.png" width = "150%">
 
 <h1 align = "center"> Thank you for reading! </h1>
 <h4 align = "center"> If you have any questions, write on <a href="https://t.me/Chin_chinless" target="_blank">Telegram</a> </h4>
