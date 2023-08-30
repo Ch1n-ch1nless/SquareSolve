@@ -2,17 +2,17 @@
 \label{solve__square__equation_8h}\index{source/solve\_square\_equation.h@{source/solve\_square\_equation.h}}
 {\ttfamily \#include $<$assert.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}trinomial.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-Equation\+Roots\+Quantity \mbox{\hyperlink{solve__square__equation_8h_a06a91d1e8380821b7bdcbc9b93d0530b}{Solve\+Square\+Equation}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Users\+Trinomial, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$Root)
+void \mbox{\hyperlink{solve__square__equation_8h_a74b0350b70d0428270d53d8ecc084b13}{Solve\+Square\+Equation}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$users\+\_\+trinomial, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$root)
 \begin{DoxyCompactList}\small\item\em Solve square equation. \end{DoxyCompactList}\item 
-Equation\+Roots\+Quantity \mbox{\hyperlink{solve__square__equation_8h_a06a0f9242080153803d1ee27544dfda0}{Solve\+Linear\+Equation}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Users\+Trinomial, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$Root)
+void \mbox{\hyperlink{solve__square__equation_8h_a7883f86cd7b50aed0923dfce7a2ca9af}{Solve\+Linear\+Equation}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$users\+\_\+trinomial, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$root)
 \begin{DoxyCompactList}\small\item\em Solve linear equation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{solve__square__equation_8h_a202e32e63779b54ac953c8282942f8b4}{Compare\+Double}} (const double number1, const double number2)
 \item 
-void \mbox{\hyperlink{solve__square__equation_8h_ae8d322f4c64cf8223ed7f56e3f52d6c8}{Sort\+Roots}} (\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$Root)
+void \mbox{\hyperlink{solve__square__equation_8h_a085489204d8968901e3a77b16a0eb616}{Sort\+Roots}} (\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$root)
 \begin{DoxyCompactList}\small\item\em regulates roots in ascending order \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{solve__square__equation_8h_adef6da3df72d6e1e028ba415233ae5d0}{Is\+Zero}} (const double number)
 \begin{DoxyCompactList}\small\item\em check the number for equality with 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -61,11 +61,11 @@ check the number for equality with 0
 \begin{DoxyReturn}{Returns}
 fabs(number) $<$ comparison const 
 \end{DoxyReturn}
-\mbox{\Hypertarget{solve__square__equation_8h_a06a0f9242080153803d1ee27544dfda0}\label{solve__square__equation_8h_a06a0f9242080153803d1ee27544dfda0}} 
+\mbox{\Hypertarget{solve__square__equation_8h_a7883f86cd7b50aed0923dfce7a2ca9af}\label{solve__square__equation_8h_a7883f86cd7b50aed0923dfce7a2ca9af}} 
 \index{solve\_square\_equation.h@{solve\_square\_equation.h}!SolveLinearEquation@{SolveLinearEquation}}
 \index{SolveLinearEquation@{SolveLinearEquation}!solve\_square\_equation.h@{solve\_square\_equation.h}}
 \doxysubsubsection{\texorpdfstring{SolveLinearEquation()}{SolveLinearEquation()}}
-{\footnotesize\ttfamily Equation\+Roots\+Quantity Solve\+Linear\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Users\+Trinomial,  }\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{Root }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Solve\+Linear\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{users\+\_\+trinomial,  }\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{root }\end{DoxyParamCaption})}
 
 
 
@@ -73,18 +73,16 @@ Solve linear equation.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em Users\+Trinomial} & structure in which coefficient values are found \\
+\mbox{\texttt{ in}}  & {\em users\+\_\+trinomial} & -\/ structure in which coefficient values are found \\
 \hline
-\mbox{\texttt{ in}}  & {\em Root} & structure with root values \\
-\hline
-\mbox{\texttt{ out}}  & {\em Equation\+Roots\+Quantity} & number of roots\\
+\mbox{\texttt{ in}}  & {\em root} & -\/ structure with root values\\
 \hline
 \end{DoxyParams}
-The function solves a linear equation. If the coefficient before x is not 0, then return ONE\+\_\+\+ROOT. value of root = -\/free term / coefficient. If the coefficient before x is 0 and free term is 0, then return INFINITE\+\_\+\+ROOTS\+\_\+\+QUANTITY. In other cases return NO\+\_\+\+ROOTS. \mbox{\Hypertarget{solve__square__equation_8h_a06a91d1e8380821b7bdcbc9b93d0530b}\label{solve__square__equation_8h_a06a91d1e8380821b7bdcbc9b93d0530b}} 
+The function solves a linear equation. If the coefficient before x is not 0, then return ONE\+\_\+\+ROOT. value of root = -\/free term / coefficient. If the coefficient before x is 0 and free term is 0, then return INFINITE\+\_\+\+ROOTS\+\_\+\+QUANTITY. In other cases return NO\+\_\+\+ROOTS. \mbox{\Hypertarget{solve__square__equation_8h_a74b0350b70d0428270d53d8ecc084b13}\label{solve__square__equation_8h_a74b0350b70d0428270d53d8ecc084b13}} 
 \index{solve\_square\_equation.h@{solve\_square\_equation.h}!SolveSquareEquation@{SolveSquareEquation}}
 \index{SolveSquareEquation@{SolveSquareEquation}!solve\_square\_equation.h@{solve\_square\_equation.h}}
 \doxysubsubsection{\texorpdfstring{SolveSquareEquation()}{SolveSquareEquation()}}
-{\footnotesize\ttfamily Equation\+Roots\+Quantity Solve\+Square\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{Users\+Trinomial,  }\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{Root }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Solve\+Square\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$}]{users\+\_\+trinomial,  }\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{root }\end{DoxyParamCaption})}
 
 
 
@@ -92,19 +90,16 @@ Solve square equation.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em Users\+Trinomial} & -\/ structure in which coefficient values are found \\
+\mbox{\texttt{ in}}  & {\em users\+\_\+trinomial} & -\/ structure in which coefficient values are found \\
 \hline
-\mbox{\texttt{ out}}  & {\em Root} & -\/ structure with root values \\
+\mbox{\texttt{ out}}  & {\em root} & -\/ structure with root values\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Equation\+Roots\+Quantity number of roots
-\end{DoxyReturn}
-Algorithm\+: If the senior coefficient is 0, then starts \mbox{\hyperlink{solve__square__equation_8h_a06a0f9242080153803d1ee27544dfda0}{Solve\+Linear\+Equation()}}. Else calculate value of Discriminant. If Discriminant $<$ 0 return NO\+\_\+\+ROOTS. If Discriminant = 0 calculate calculates the root value by formula and return ONE\+\_\+\+ROOT. Else calculates the values of roots by formula and return TWO\+\_\+\+ROOTS. \mbox{\Hypertarget{solve__square__equation_8h_ae8d322f4c64cf8223ed7f56e3f52d6c8}\label{solve__square__equation_8h_ae8d322f4c64cf8223ed7f56e3f52d6c8}} 
+Algorithm\+: If the senior coefficient is 0, then starts \mbox{\hyperlink{solve__square__equation_8h_a7883f86cd7b50aed0923dfce7a2ca9af}{Solve\+Linear\+Equation()}}. Else calculate value of Discriminant. If Discriminant $<$ 0 return NO\+\_\+\+ROOTS. If Discriminant = 0 calculate calculates the root value by formula and return ONE\+\_\+\+ROOT. Else calculates the values of roots by formula and return TWO\+\_\+\+ROOTS. \mbox{\Hypertarget{solve__square__equation_8h_a085489204d8968901e3a77b16a0eb616}\label{solve__square__equation_8h_a085489204d8968901e3a77b16a0eb616}} 
 \index{solve\_square\_equation.h@{solve\_square\_equation.h}!SortRoots@{SortRoots}}
 \index{SortRoots@{SortRoots}!solve\_square\_equation.h@{solve\_square\_equation.h}}
 \doxysubsubsection{\texorpdfstring{SortRoots()}{SortRoots()}}
-{\footnotesize\ttfamily void Sort\+Roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{Root }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Sort\+Roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$}]{root }\end{DoxyParamCaption})}
 
 
 

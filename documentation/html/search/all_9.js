@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['second_20',['second',['../struct_roots_of_trinomial.html#ad8e21005dc3bcf26a1583bf8478a8359',1,'RootsOfTrinomial']]],
-  ['second_5fcf_21',['second_cf',['../struct_square_trinomial_coef.html#a74f0ed4a23dbcb96af3467506e3a0d79',1,'SquareTrinomialCoef']]],
-  ['senior_5fcf_22',['senior_cf',['../struct_square_trinomial_coef.html#af20a0d7ba2a05d1ec5655650cf0711d1',1,'SquareTrinomialCoef']]],
-  ['showinstructionforuser_23',['ShowInstructionForUser',['../_i_oput_8h.html#a447d3270e361d60ce7600ce19ee2b3b8',1,'output.cpp']]],
-  ['solve_5fsquare_5fequation_2eh_24',['solve_square_equation.h',['../solve__square__equation_8h.html',1,'']]],
-  ['solvelinearequation_25',['SolveLinearEquation',['../solve__square__equation_8h.html#a06a0f9242080153803d1ee27544dfda0',1,'solve_square_equation.cpp']]],
-  ['solvesquareequation_26',['SolveSquareEquation',['../solve__square__equation_8h.html#a06a91d1e8380821b7bdcbc9b93d0530b',1,'solve_square_equation.cpp']]],
-  ['sortroots_27',['SortRoots',['../solve__square__equation_8h.html#ae8d322f4c64cf8223ed7f56e3f52d6c8',1,'solve_square_equation.cpp']]],
-  ['squaretrinomialcoef_28',['SquareTrinomialCoef',['../struct_square_trinomial_coef.html',1,'']]],
-  ['struct_2eh_29',['struct.h',['../struct_8h.html',1,'']]]
+  ['readcorrectsqrtrinomial_17',['ReadCorrectSqrTrinomial',['../test_8h.html#a3f9bb8d9c1bf5e319ad46e8edac1a52b',1,'test.cpp']]],
+  ['readflags_18',['ReadFlags',['../need__test__to__do_8h.html#aa485a29d79b8db23d2c43ffd2c6461ab',1,'main.cpp']]],
+  ['readnumber_19',['ReadNumber',['../test_8h.html#a0c471025c69fdded15b48d061d8c2407',1,'test.cpp']]],
+  ['readsquaretrinomial_20',['ReadSquareTrinomial',['../_i_oput_8h.html#ad641c59a75c8c5f27638b5c35801c5aa',1,'input.cpp']]],
+  ['rootsoftrinomial_21',['RootsOfTrinomial',['../struct_roots_of_trinomial.html',1,'']]],
+  ['runtests_22',['RunTests',['../test_8h.html#a21c1d6ea845542c163758f660dcc928d',1,'test.cpp']]]
 ];

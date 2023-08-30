@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['printequation_13',['PrintEquation',['../test_8h.html#a6012eeab2352532ca8e313d21d4f913e',1,'test.cpp']]],
-  ['printresult_14',['PrintResult',['../_i_oput_8h.html#ab454fbbba49f8abb33870e40abf43763',1,'output.cpp']]]
+  ['output_5fprecision_14',['OUTPUT_PRECISION',['../_i_oput_8h.html#a2e16006983da63e90f4f6b935b9344f1',1,'IOput.h']]]
 ];

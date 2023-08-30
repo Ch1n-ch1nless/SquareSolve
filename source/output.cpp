@@ -38,7 +38,7 @@ void PrintResult(const RootsOfTrinomial root) //function which print result of p
 
 void ShowInstructionForUser()
 {
-    printf("# SolveSquareEquation program version 1.14\n"
+    printf("# SolveSquareEquation program version 1.15\n"
            "# Directed by Aleksandrov Oleg\n\n"
            "Hello, you have launched a program to solve the square equation.\n"
            "This program finds roots up to %s%d%s characters!\n"

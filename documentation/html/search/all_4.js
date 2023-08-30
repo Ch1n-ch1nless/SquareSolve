@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ioput_2eh_9',['IOput.h',['../_i_oput_8h.html',1,'']]],
-  ['iszero_10',['IsZero',['../solve__square__equation_8h.html#adef6da3df72d6e1e028ba415233ae5d0',1,'compare.cpp']]]
+  ['help_9',['HELP',['../need__test__to__do_8h.html#ade758c18c15187e36767359605972ca2',1,'need_test_to_do.h']]]
 ];

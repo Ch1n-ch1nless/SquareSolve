@@ -1,0 +1,96 @@
+\hypertarget{need__test__to__do_8h}{}\doxysection{source/need\+\_\+test\+\_\+to\+\_\+do.h File Reference}
+\label{need__test__to__do_8h}\index{source/need\_test\_to\_do.h@{source/need\_test\_to\_do.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}IOput.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}solve\+\_\+square\+\_\+equation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{need__test__to__do_8h_a0415a93a4e387f3015a72655ebeb58bc}\label{need__test__to__do_8h_a0415a93a4e387f3015a72655ebeb58bc}} 
+enum {\bfseries Flags\+Of\+Main} \{ {\bfseries nothing} = 0
+, {\bfseries help} = 1
+, {\bfseries test} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Flags\+Of\+Main \mbox{\hyperlink{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}{Read\+Flags}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em read flags from terminal \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{need__test__to__do_8h_a740013763e4a11c22ebf7d97e66a826d}{Check\+File}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Check if the file name is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}{UNITTEST}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}
+\begin{DoxyCompactList}\small\item\em Pointer to string \char`\"{}-\/-\/unit\+\_\+test\char`\"{}. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}{HELP}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}
+\begin{DoxyCompactList}\small\item\em Pointer to string \char`\"{}-\/-\/help\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{need__test__to__do_8h_a740013763e4a11c22ebf7d97e66a826d}\label{need__test__to__do_8h_a740013763e4a11c22ebf7d97e66a826d}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!CheckFile@{CheckFile}}
+\index{CheckFile@{CheckFile}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{CheckFile()}{CheckFile()}}
+{\footnotesize\ttfamily bool Check\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Check if the file name is correct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & -\/ file name pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the file extension is .txt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}\label{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!ReadFlags@{ReadFlags}}
+\index{ReadFlags@{ReadFlags}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{ReadFlags()}{ReadFlags()}}
+{\footnotesize\ttfamily Flags\+Of\+Main Read\+Flags (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+read flags from terminal 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em file\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flag -\/ enum Flags\+Of\+Main
+\end{DoxyReturn}
+Function reads all flags from terminal and returns a variable that will then specify which program to call 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}\label{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!HELP@{HELP}}
+\index{HELP@{HELP}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{HELP}{HELP}}
+{\footnotesize\ttfamily const char HELP\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}}
+
+
+
+Pointer to string \char`\"{}-\/-\/help\char`\"{}. 
+
+This string is passed in arguments of function main(). When the help pointer is an argument of the main() function, the program show what commands user can enter. \mbox{\Hypertarget{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}\label{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!UNITTEST@{UNITTEST}}
+\index{UNITTEST@{UNITTEST}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{UNITTEST}{UNITTEST}}
+{\footnotesize\ttfamily const char UNITTEST\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}}
+
+
+
+Pointer to string \char`\"{}-\/-\/unit\+\_\+test\char`\"{}. 
+
+This string is passed in arguments of function main(). When the unittest pointer is an argument of the main() function, the test program is called. 

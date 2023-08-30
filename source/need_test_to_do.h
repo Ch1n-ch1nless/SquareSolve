@@ -34,6 +34,16 @@ enum FlagsOfMain {
     test = 2
 };
 
+/**
+ *@brief read flags from terminal
+ *
+ *@param [in] argc
+ *@param [in] argv
+ *@param [out] file_name
+ *@return Flag - enum FlagsOfMain
+ *
+ *Function reads all flags from terminal and returns a variable that will then specify which program to call
+ */
 FlagsOfMain ReadFlags(int argc, const char* argv[], const char *file_name);
 
 /**

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rootsoftrinomial_32',['RootsOfTrinomial',['../struct_roots_of_trinomial.html',1,'']]]
+  ['rootsoftrinomial_36',['RootsOfTrinomial',['../struct_roots_of_trinomial.html',1,'']]]
 ];

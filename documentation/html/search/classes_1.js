@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['squaretrinomialcoef_33',['SquareTrinomialCoef',['../struct_square_trinomial_coef.html',1,'']]]
+  ['squaretrinomialcoef_37',['SquareTrinomialCoef',['../struct_square_trinomial_coef.html',1,'']]]
 ];

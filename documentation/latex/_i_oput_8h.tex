@@ -2,7 +2,7 @@
 \label{_i_oput_8h}\index{source/IOput.h@{source/IOput.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$TXLib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}trinomial.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,13 +11,16 @@ void \mbox{\hyperlink{_i_oput_8h_a447d3270e361d60ce7600ce19ee2b3b8}{Show\+Instru
 \begin{DoxyCompactList}\small\item\em Show the user guide about how to use the program. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}{Read\+Square\+Trinomial}} (\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$Users\+Trinomial)
 \begin{DoxyCompactList}\small\item\em Read the coefficients of the square trinomial. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}{Print\+Result}} (const Equation\+Roots\+Quantity Count\+Of\+Roots, const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} Root)
+void \mbox{\hyperlink{_i_oput_8h_a8f31933bee1ca81837cbcad6802288e2}{Print\+Result}} (const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} root)
 \begin{DoxyCompactList}\small\item\em Print the number of roots and their value. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}{Get\+Input}} (char name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]}, const char symbol)
+double \mbox{\hyperlink{_i_oput_8h_a2c6b194855645aed39c307f9eef6e2f4}{Get\+Number}} (char name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]}, const char symbol)
 \begin{DoxyCompactList}\small\item\em Read coefficient value. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}\label{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}} 
-void \mbox{\hyperlink{_i_oput_8h_a766d243dc775e4827c254b343572b6f9}{clear\+BUF}} ()
-\begin{DoxyCompactList}\small\item\em clear input buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{_i_oput_8h_aeaf9debbeb62261225a8475f959a08e1}\label{_i_oput_8h_aeaf9debbeb62261225a8475f959a08e1}} 
+void \mbox{\hyperlink{_i_oput_8h_aeaf9debbeb62261225a8475f959a08e1}{Clear\+BUF}} ()
+\begin{DoxyCompactList}\small\item\em clear input buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_i_oput_8h_ab180efaa64feefae6244d2c4b4eb7809}\label{_i_oput_8h_ab180efaa64feefae6244d2c4b4eb7809}} 
+void \mbox{\hyperlink{_i_oput_8h_ab180efaa64feefae6244d2c4b4eb7809}{Show\+Help}} ()
+\begin{DoxyCompactList}\small\item\em show list with commands \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,11 +30,11 @@ const int \mbox{\hyperlink{_i_oput_8h_a2e16006983da63e90f4f6b935b9344f1}{OUTPUT\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}\label{_i_oput_8h_aa0cb9d63c8150c3b95b236c9179c165d}} 
-\index{IOput.h@{IOput.h}!GetInput@{GetInput}}
-\index{GetInput@{GetInput}!IOput.h@{IOput.h}}
-\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
-{\footnotesize\ttfamily double Get\+Input (\begin{DoxyParamCaption}\item[{char}]{name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]},  }\item[{const char}]{symbol }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_i_oput_8h_a2c6b194855645aed39c307f9eef6e2f4}\label{_i_oput_8h_a2c6b194855645aed39c307f9eef6e2f4}} 
+\index{IOput.h@{IOput.h}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!IOput.h@{IOput.h}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily double Get\+Number (\begin{DoxyParamCaption}\item[{char}]{name\+\_\+of\+\_\+\+CF\mbox{[}$\,$\mbox{]},  }\item[{const char}]{symbol }\end{DoxyParamCaption})}
 
 
 
@@ -47,23 +50,21 @@ Read coefficient value.
 \begin{DoxyReturn}{Returns}
 value of coefficient 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}\label{_i_oput_8h_ab454fbbba49f8abb33870e40abf43763}} 
+\mbox{\Hypertarget{_i_oput_8h_a8f31933bee1ca81837cbcad6802288e2}\label{_i_oput_8h_a8f31933bee1ca81837cbcad6802288e2}} 
 \index{IOput.h@{IOput.h}!PrintResult@{PrintResult}}
 \index{PrintResult@{PrintResult}!IOput.h@{IOput.h}}
 \doxysubsubsection{\texorpdfstring{PrintResult()}{PrintResult()}}
-{\footnotesize\ttfamily void Print\+Result (\begin{DoxyParamCaption}\item[{const Equation\+Roots\+Quantity}]{Count\+Of\+Roots,  }\item[{const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}}]{Root }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Print\+Result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}}]{root }\end{DoxyParamCaption})}
 
 
 
 Print the number of roots and their value. 
 
-Function accepts the structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} and enum Equation\+Roots\+Quantity Count\+Of\+Roots. If Count\+Of\+Roots = NO\+\_\+\+ROOTS or INFINITE\+\_\+\+QUANTITY\+\_\+\+ROOTS, does NOT print roots. If Count\+Of\+Roots = ONE\+\_\+\+ROOT, print 1 root. If Count\+Of\+Roots = TWO\+\_\+\+ROOTS, print 2 roots.
+Function accepts the structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{}. If Count\+Of\+Roots = NO\+\_\+\+ROOTS or INFINITE\+\_\+\+QUANTITY\+\_\+\+ROOTS, does NOT print roots. If Count\+Of\+Roots = ONE\+\_\+\+ROOT, print 1 root. If Count\+Of\+Roots = TWO\+\_\+\+ROOTS, print 2 roots.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ out}}  & {\em Count\+Of\+Roots} & -\/ enum Equation\+Roots\+Quantity \\
-\hline
-\mbox{\texttt{ out}}  & {\em Root} & -\/ structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} \\
+\mbox{\texttt{ out}}  & {\em root} & -\/ structure \textquotesingle{}\mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}}\textquotesingle{} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}\label{_i_oput_8h_ad641c59a75c8c5f27638b5c35801c5aa}} 
