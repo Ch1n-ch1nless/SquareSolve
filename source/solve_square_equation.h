@@ -11,7 +11,7 @@
 /**
  *@brief Accuracy of the comparison
  */
-const double EPS = 1e-7;
+const double EPSILON = 1e-7;
 
 /**
  *

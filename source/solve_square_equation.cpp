@@ -29,7 +29,7 @@ void SolveSquareEquation(const SquareTrinomialCoef *users_trinomial, RootsOfTrin
         root->number = ONE_ROOT;
         return;
     }
-    else if (discriminant >= EPS) {//Discriminant > 0
+    else if (discriminant >= EPSILON) {//Discriminant > 0
         double sqrt_disc = sqrt(discriminant);
 
         root->first  = (-(users_trinomial->second_cf) - sqrt_disc) / (2 * users_trinomial->senior_cf);
