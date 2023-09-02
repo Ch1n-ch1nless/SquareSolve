@@ -5,7 +5,7 @@ bool CompareDouble(const double number1, const double number2) //function which 
     return (fabs(number1 - number2) < EPSILON);
 }
 
-bool IsZero(const double number)
+bool IsZero(const double number)                               //function which check the equation of number with zero
 {
     return CompareDouble(number, 0.0);
 }

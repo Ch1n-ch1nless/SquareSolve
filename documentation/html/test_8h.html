@@ -84,9 +84,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a3aac03f42dfec6429a55eb0be1d3e9fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a3aac03f42dfec6429a55eb0be1d3e9fa">CheckCorrectnessOfSolve</a> (const <a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *correct_trinomial, const <a class="el" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *correct_root)</td></tr>
 <tr class="memdesc:a3aac03f42dfec6429a55eb0be1d3e9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the correctness of the <a class="el" href="solve__square__equation_8h.html#a74b0350b70d0428270d53d8ecc084b13" title="Solve square equation.">SolveSquareEquation()</a>  <a href="test_8h.html#a3aac03f42dfec6429a55eb0be1d3e9fa">More...</a><br /></td></tr>
 <tr class="separator:a3aac03f42dfec6429a55eb0be1d3e9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c1d6ea845542c163758f660dcc928d"><td class="memItemLeft" align="right" valign="top"><a id="a21c1d6ea845542c163758f660dcc928d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a> (const char *file_name)</td></tr>
-<tr class="memdesc:a21c1d6ea845542c163758f660dcc928d"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs tests <br /></td></tr>
+<tr class="memitem:a21c1d6ea845542c163758f660dcc928d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">RunTests</a> (const char *file_name)</td></tr>
+<tr class="memdesc:a21c1d6ea845542c163758f660dcc928d"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs tests  <a href="test_8h.html#a21c1d6ea845542c163758f660dcc928d">More...</a><br /></td></tr>
 <tr class="separator:a21c1d6ea845542c163758f660dcc928d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f9bb8d9c1bf5e319ad46e8edac1a52b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8h.html#a3f9bb8d9c1bf5e319ad46e8edac1a52b">ReadCorrectSqrTrinomial</a> (<a class="el" href="struct_square_trinomial_coef.html">SquareTrinomialCoef</a> *ref_trinomial, <a class="el" href="struct_roots_of_trinomial.html">RootsOfTrinomial</a> *ref_roots, FILE *ptr_to_test)</td></tr>
 <tr class="memdesc:a3f9bb8d9c1bf5e319ad46e8edac1a52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from file coefficients of square trinomial and its roots.  <a href="test_8h.html#a3f9bb8d9c1bf5e319ad46e8edac1a52b">More...</a><br /></td></tr>
@@ -201,7 +200,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test
     <tr><td class="paramdir">[out]</td><td class="paramname"><a class="el" href="struct_square_trinomial_coef.html" title="struct &#39;SquareTrinomialCoef&#39; is is the structure that contains the value of coefficients">SquareTrinomialCoef</a></td><td>*RefTrinomial - structure in which coefficient values are found </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">CorrectNumberOfRoots</td><td>- correct root number </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">RefRoots</td><td>- structure in which correct roots are found </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">FILE</td><td>- file pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr_to_test</td><td>- file pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,10 +237,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr_to_test</td><td>- file pointer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">check_correct_numbers_test</td><td>- read correct coefficient counter </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number </dd></dl>
+
+</div>
+</div>
+<a id="a21c1d6ea845542c163758f660dcc928d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c1d6ea845542c163758f660dcc928d">&#9670;&nbsp;</a></span>RunTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunTests </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>runs tests </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>- name of file with tests </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

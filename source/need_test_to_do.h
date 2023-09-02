@@ -29,12 +29,12 @@ const char OPTION_UNITTEST[] = "--unit_test";
 const char OPTION_HELP[] = "--help";
 
 /// FLAGS - which option need to run
-enum ArgsOfMain {
-    FLAG_NOTHING = 0,  //!< run default option - solve square equation
-    FLAG_HELP = 1,     //!< show options
-    FLAG_UNITTEST = 2, //!< run UNITtests
+enum ModsOfMain {
+    MOD_SQUARE = 0,   //!< run default option - solve square equation
+    MOD_HELP = 1,     //!< show options
+    MOD_UNITTEST = 2, //!< run UNITtests
 
-    FLAG_END           //!< error! User print incorrect arguments
+    MOD_END           //!< error! User print incorrect arguments
 };
 
 /**
@@ -45,9 +45,10 @@ enum ArgsOfMain {
  *@param [out] file_name
  *@return Flag - enum FlagsOfMain
  *
- *Function reads all flags from terminal and returns a variable that will then specify which program to call
+ *Function reads all flags from terminal and returns a variable
+ * that will then specify which program to call
  */
-ArgsOfMain ReadArgs(int argc, const char* argv[], int *ptr_to_file_name);
+ModsOfMain ReadArgs(int argc, const char* argv[], int *ptr_to_file_name);
 
 /**
  *

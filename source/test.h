@@ -26,6 +26,8 @@ int CheckCorrectnessOfSolve(const SquareTrinomialCoef *correct_trinomial,
  *
  *@brief runs tests
  *
+ *@param file_name - name of file with tests
+ *
  */
 void RunTests(const char *file_name);
 
@@ -36,7 +38,7 @@ void RunTests(const char *file_name);
  *@param [out] SquareTrinomialCoef *RefTrinomial - structure in which coefficient values are found
  *@param [out] CorrectNumberOfRoots - correct root number
  *@param [out] RefRoots - structure in which correct roots are found
- *@param [in] FILE - file pointer
+ *@param [in]  ptr_to_test - file pointer
  *
  */
 bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
@@ -47,6 +49,7 @@ bool ReadCorrectSqrTrinomial(SquareTrinomialCoef *ref_trinomial,
  *@brief Read the number from file
  *
  *@param [in] ptr_to_test - file pointer
+ *@param [out] check_correct_numbers_test - read correct coefficient counter
  *@return number
  */
 double ReadNumber(FILE *ptr_to_test, int *check_correct_numbers_test);

@@ -45,7 +45,8 @@ double GetNumber(const char name_of_cf[], const char symbol)
     return temp;
 }
 
-void ClearBuf() {
+void ClearBuf()
+{
     int c = 0;
     while((c = getchar()) != '\n')
         ;

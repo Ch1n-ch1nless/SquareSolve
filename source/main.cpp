@@ -4,15 +4,15 @@ int main(int argc, const char* argv[])
 {
     int ptr_to_file_name = 0;
 
-    ArgsOfMain what_option_run = ReadArgs(argc, argv, &ptr_to_file_name);
+    ModsOfMain what_option_run = ReadArgs(argc, argv, &ptr_to_file_name);
 
     switch(what_option_run) {
-        case FLAG_NOTHING:
+        case MOD_SQUARE:
         {
             ShowInstructionForUser();                                      //Show the user the instructions for using the program
 
-            SquareTrinomialCoef users_trinomial;                           //The User's equation which need to solve
-            RootsOfTrinomial roots_of_trinomial;                           //The roots of SquareTrinomial
+            SquareTrinomialCoef users_trinomial;         //The User's equation which need to solve
+            RootsOfTrinomial roots_of_trinomial;    //The roots of SquareTrinomial
 
             ReadSquareTrinomial(&users_trinomial);                         //Read the coefficients of polynomial
             SolveSquareEquation(&users_trinomial, &roots_of_trinomial);    //Solve the square equation
@@ -21,19 +21,19 @@ int main(int argc, const char* argv[])
             break;
         }
 
-        case FLAG_HELP:
+        case MOD_HELP:
         {
             ShowHelp();
             break;
         }
 
-        case FLAG_UNITTEST:
+        case MOD_UNITTEST:
         {
             RunTests(argv[ptr_to_file_name]);
             break;
         }
 
-        case FLAG_END:
+        case MOD_END:
         {
             printf("You print incorrect arguments!\n");
             printf("Please, read the guide:\n");
@@ -52,32 +52,32 @@ int main(int argc, const char* argv[])
     return 0;
 }
 
-ArgsOfMain ReadArgs(int argc, const char* argv[], int *ptr_to_file_name)
+ModsOfMain ReadArgs(int argc, const char* argv[], int *ptr_to_file_name)
 {
-    int temp_flag = FLAG_END;
+    int mod = MOD_END;
     for (int i = 0; i < argc; i++) {
         if (!strcmp(argv[i], OPTION_HELP)) {
-            temp_flag = min(temp_flag, (int) FLAG_HELP);
+            mod = min(mod, (int) MOD_HELP);
         } else if (!strcmp(argv[i], OPTION_UNITTEST)){
-            temp_flag = min(temp_flag, (int) FLAG_UNITTEST);
-            if (temp_flag == (int) FLAG_UNITTEST) {
+            mod = min(mod, (int) MOD_UNITTEST);
+            if (mod == (int) MOD_UNITTEST) {
                 i++;
                 if (CheckFile(argv[i])) {
                     *ptr_to_file_name = i;
                 } else {
-                    temp_flag = FLAG_END;
+                    mod = MOD_END;
                     break;
                 }
             } else {
-                temp_flag = FLAG_END;
+                mod = MOD_END;
                 break;
             }
         }
     }
-    if (temp_flag == FLAG_END && argc == 1) {
-        temp_flag = 0;
+    if (mod == MOD_END && argc == 1) {
+        mod = 0;
     }
-    return (ArgsOfMain) temp_flag;
+    return (ModsOfMain) mod;
 }
 
 bool CheckFile(const char *str)

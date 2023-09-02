@@ -23,7 +23,6 @@ void ShowInstructionForUser();
  * Function accepts pointer to structure 'SquareTrinomialCoef' and fills its coefficients
  *
  * @param [out] UsersTrinomial - pointer to structure 'SquareTrinomialCoef'
- *
  */
 void ReadSquareTrinomial(SquareTrinomialCoef *UsersTrinomial);
 
@@ -36,12 +35,10 @@ void ReadSquareTrinomial(SquareTrinomialCoef *UsersTrinomial);
  * If CountOfRoots = TWO_ROOTS, print 2 roots.
  *
  * @param [out] root - structure 'RootsOfTrinomial'
- *
  */
 void PrintResult(const RootsOfTrinomial root);
 
 /**
- *
  * @brief Read coefficient value
  *
  * @param [in] name_of_CF name of coefficient

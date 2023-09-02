@@ -10,7 +10,6 @@
 \item 
 int \mbox{\hyperlink{test_8h_a3aac03f42dfec6429a55eb0be1d3e9fa}{Check\+Correctness\+Of\+Solve}} (const \mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$correct\+\_\+trinomial, const \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$correct\+\_\+root)
 \begin{DoxyCompactList}\small\item\em check the correctness of the \mbox{\hyperlink{solve__square__equation_8h_a74b0350b70d0428270d53d8ecc084b13}{Solve\+Square\+Equation()}} \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{test_8h_a21c1d6ea845542c163758f660dcc928d}\label{test_8h_a21c1d6ea845542c163758f660dcc928d}} 
 void \mbox{\hyperlink{test_8h_a21c1d6ea845542c163758f660dcc928d}{Run\+Tests}} (const char $\ast$file\+\_\+name)
 \begin{DoxyCompactList}\small\item\em runs tests \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{test_8h_a3f9bb8d9c1bf5e319ad46e8edac1a52b}{Read\+Correct\+Sqr\+Trinomial}} (\mbox{\hyperlink{struct_square_trinomial_coef}{Square\+Trinomial\+Coef}} $\ast$ref\+\_\+trinomial, \mbox{\hyperlink{struct_roots_of_trinomial}{Roots\+Of\+Trinomial}} $\ast$ref\+\_\+roots, FILE $\ast$ptr\+\_\+to\+\_\+test)
@@ -75,7 +74,7 @@ Read from file coefficients of square trinomial and its roots.
 \hline
 \mbox{\texttt{ out}}  & {\em Ref\+Roots} & -\/ structure in which correct roots are found \\
 \hline
-\mbox{\texttt{ in}}  & {\em FILE} & -\/ file pointer \\
+\mbox{\texttt{ in}}  & {\em ptr\+\_\+to\+\_\+test} & -\/ file pointer \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{test_8h_a0c471025c69fdded15b48d061d8c2407}\label{test_8h_a0c471025c69fdded15b48d061d8c2407}} 
@@ -92,7 +91,24 @@ Read the number from file.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em ptr\+\_\+to\+\_\+test} & -\/ file pointer \\
 \hline
+\mbox{\texttt{ out}}  & {\em check\+\_\+correct\+\_\+numbers\+\_\+test} & -\/ read correct coefficient counter \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 number 
 \end{DoxyReturn}
+\mbox{\Hypertarget{test_8h_a21c1d6ea845542c163758f660dcc928d}\label{test_8h_a21c1d6ea845542c163758f660dcc928d}} 
+\index{test.h@{test.h}!RunTests@{RunTests}}
+\index{RunTests@{RunTests}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{RunTests()}{RunTests()}}
+{\footnotesize\ttfamily void Run\+Tests (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+runs tests 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & -\/ name of file with tests \\
+\hline
+\end{DoxyParams}

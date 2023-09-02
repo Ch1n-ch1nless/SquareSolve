@@ -2,7 +2,6 @@
 #ifndef COLORS_H_INCLUDED
 #define COLORS_H_INCLUDED
 
-
 static const char* ESCYELLOW = "\033[0;33m"; //!<paints a line in the terminal in yellow
 
 static const char* ESCRED = "\033[0;31m";    //!<paints a line in the terminal in red
