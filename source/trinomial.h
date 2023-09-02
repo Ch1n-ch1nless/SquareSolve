@@ -2,12 +2,13 @@
 #ifndef TRINOMIAL_H_INCLUDED
 #define TRINOMIAL_H_INCLUDED
 
+///COUNT OF ROOTS
 enum EquationRootsQuantity
 {
-    INFINITE_ROOTS_QUANTITY = -1,
-    NO_ROOTS = 0,
-    ONE_ROOT = 1,
-    TWO_ROOTS = 2
+    INFINITE_ROOTS_QUANTITY = -1, //!< Equation has infinite roots
+    NO_ROOTS = 0,                 //!< Equation has NOT roots
+    ONE_ROOT = 1,                 //!< Equation has one root
+    TWO_ROOTS = 2                 //!< Equation has two roots
 };
 
 ///struct 'SquareTrinomialCoef' is is the structure that contains the value of coefficients

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_65',['HELP',['../need__test__to__do_8h.html#ade758c18c15187e36767359605972ca2',1,'need_test_to_do.h']]]
+  ['number_75',['number',['../struct_roots_of_trinomial.html#adc60820a8b3b1542effefabf462aa659',1,'RootsOfTrinomial']]]
 ];

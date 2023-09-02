@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['output_5fprecision_67',['OUTPUT_PRECISION',['../_i_oput_8h.html#a2e16006983da63e90f4f6b935b9344f1',1,'IOput.h']]]
+  ['second_79',['second',['../struct_roots_of_trinomial.html#ad8e21005dc3bcf26a1583bf8478a8359',1,'RootsOfTrinomial']]],
+  ['second_5fcf_80',['second_cf',['../struct_square_trinomial_coef.html#a74f0ed4a23dbcb96af3467506e3a0d79',1,'SquareTrinomialCoef']]],
+  ['senior_5fcf_81',['senior_cf',['../struct_square_trinomial_coef.html#af20a0d7ba2a05d1ec5655650cf0711d1',1,'SquareTrinomialCoef']]]
 ];

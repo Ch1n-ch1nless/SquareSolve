@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_9',['HELP',['../need__test__to__do_8h.html#ade758c18c15187e36767359605972ca2',1,'need_test_to_do.h']]]
+  ['getnumber_14',['GetNumber',['../_i_oput_8h.html#a2bbf545ad2bd2559f0e51b6383ce5c95',1,'input.cpp']]]
 ];

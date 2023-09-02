@@ -4,7 +4,7 @@ int main(int argc, const char* argv[])
 {
     int ptr_to_file_name = 0;
 
-    FlagsOfMain what_option_run = ReadFlags(argc, argv, &ptr_to_file_name);
+    ArgsOfMain what_option_run = ReadArgs(argc, argv, &ptr_to_file_name);
 
     switch(what_option_run) {
         case FLAG_NOTHING:
@@ -52,9 +52,7 @@ int main(int argc, const char* argv[])
     return 0;
 }
 
-
-
-FlagsOfMain ReadFlags(int argc, const char* argv[], int *ptr_to_file_name)
+ArgsOfMain ReadArgs(int argc, const char* argv[], int *ptr_to_file_name)
 {
     int temp_flag = FLAG_END;
     for (int i = 0; i < argc; i++) {
@@ -79,7 +77,7 @@ FlagsOfMain ReadFlags(int argc, const char* argv[], int *ptr_to_file_name)
     if (temp_flag == FLAG_END && argc == 1) {
         temp_flag = 0;
     }
-    return (FlagsOfMain) temp_flag;
+    return (ArgsOfMain) temp_flag;
 }
 
 bool CheckFile(const char *str)

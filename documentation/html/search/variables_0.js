@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eps_62',['EPS',['../solve__square__equation_8h.html#afe01386a82fedc016455a43c20280a97',1,'solve_square_equation.h']]]
+  ['epsilon_72',['EPSILON',['../solve__square__equation_8h.html#a596344e5a2992d2beec43b76a6294de0',1,'solve_square_equation.h']]]
 ];

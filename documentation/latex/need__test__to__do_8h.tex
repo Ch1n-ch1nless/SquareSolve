@@ -7,26 +7,57 @@
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{need__test__to__do_8h_a0415a93a4e387f3015a72655ebeb58bc}\label{need__test__to__do_8h_a0415a93a4e387f3015a72655ebeb58bc}} 
-enum {\bfseries Flags\+Of\+Main} \{ {\bfseries nothing} = 0
-, {\bfseries help} = 1
-, {\bfseries test} = 2
+enum \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}{Args\+Of\+Main}} \{ \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a7ace7f735f1c56c42058cbc29f440784}{FLAG\+\_\+\+NOTHING}} = 0
+, \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26ac2eb341fe3bbd742d173dbfd1047f9e3}{FLAG\+\_\+\+HELP}} = 1
+, \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26af9a423ece5ded62734d3184ff22457c0}{FLAG\+\_\+\+UNITTEST}} = 2
+, \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a418554ee66073c456a67b69765c2047b}{FLAG\+\_\+\+END}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em FLAGS -\/ which option need to run. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-Flags\+Of\+Main \mbox{\hyperlink{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}{Read\+Flags}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char $\ast$file\+\_\+name)
+\mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}{Args\+Of\+Main}} \mbox{\hyperlink{need__test__to__do_8h_a95ae298c7dcba6643062d1f93d8ac907}{Read\+Args}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, int $\ast$ptr\+\_\+to\+\_\+file\+\_\+name)
 \begin{DoxyCompactList}\small\item\em read flags from terminal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{need__test__to__do_8h_a740013763e4a11c22ebf7d97e66a826d}{Check\+File}} (const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em Check if the file name is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const char \mbox{\hyperlink{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}{UNITTEST}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}
+const char \mbox{\hyperlink{need__test__to__do_8h_a3b2b3a65db6bc1d07bad257fc95f0def}{OPTION\+\_\+\+UNITTEST}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}
 \begin{DoxyCompactList}\small\item\em Pointer to string \char`\"{}-\/-\/unit\+\_\+test\char`\"{}. \end{DoxyCompactList}\item 
-const char \mbox{\hyperlink{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}{HELP}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}
+const char \mbox{\hyperlink{need__test__to__do_8h_a4bdb82b5f72caf3342eb226cea7eddcf}{OPTION\+\_\+\+HELP}} \mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}
 \begin{DoxyCompactList}\small\item\em Pointer to string \char`\"{}-\/-\/help\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}\label{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!ArgsOfMain@{ArgsOfMain}}
+\index{ArgsOfMain@{ArgsOfMain}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{ArgsOfMain}{ArgsOfMain}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}{Args\+Of\+Main}}}
+
+
+
+FLAGS -\/ which option need to run. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_NOTHING@{FLAG\_NOTHING}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!FLAG\_NOTHING@{FLAG\_NOTHING}}}\mbox{\Hypertarget{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a7ace7f735f1c56c42058cbc29f440784}\label{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a7ace7f735f1c56c42058cbc29f440784}} 
+FLAG\+\_\+\+NOTHING&run default option -\/ solve square equation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_HELP@{FLAG\_HELP}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!FLAG\_HELP@{FLAG\_HELP}}}\mbox{\Hypertarget{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26ac2eb341fe3bbd742d173dbfd1047f9e3}\label{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26ac2eb341fe3bbd742d173dbfd1047f9e3}} 
+FLAG\+\_\+\+HELP&show options \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_UNITTEST@{FLAG\_UNITTEST}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!FLAG\_UNITTEST@{FLAG\_UNITTEST}}}\mbox{\Hypertarget{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26af9a423ece5ded62734d3184ff22457c0}\label{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26af9a423ece5ded62734d3184ff22457c0}} 
+FLAG\+\_\+\+UNITTEST&run UNITtests \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAG\_END@{FLAG\_END}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!FLAG\_END@{FLAG\_END}}}\mbox{\Hypertarget{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a418554ee66073c456a67b69765c2047b}\label{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26a418554ee66073c456a67b69765c2047b}} 
+FLAG\+\_\+\+END&error! User print incorrect arguments \\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -48,11 +79,11 @@ Check if the file name is correct.
 \begin{DoxyReturn}{Returns}
 if the file extension is .txt 
 \end{DoxyReturn}
-\mbox{\Hypertarget{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}\label{need__test__to__do_8h_aa485a29d79b8db23d2c43ffd2c6461ab}} 
-\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!ReadFlags@{ReadFlags}}
-\index{ReadFlags@{ReadFlags}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
-\doxysubsubsection{\texorpdfstring{ReadFlags()}{ReadFlags()}}
-{\footnotesize\ttfamily Flags\+Of\+Main Read\+Flags (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{need__test__to__do_8h_a95ae298c7dcba6643062d1f93d8ac907}\label{need__test__to__do_8h_a95ae298c7dcba6643062d1f93d8ac907}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!ReadArgs@{ReadArgs}}
+\index{ReadArgs@{ReadArgs}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{ReadArgs()}{ReadArgs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{need__test__to__do_8h_a182bc0b4ae32a33678cbff03fda9ca26}{Args\+Of\+Main}} Read\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{ptr\+\_\+to\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
 
 
 
@@ -73,21 +104,21 @@ Flag -\/ enum Flags\+Of\+Main
 Function reads all flags from terminal and returns a variable that will then specify which program to call 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}\label{need__test__to__do_8h_ade758c18c15187e36767359605972ca2}} 
-\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!HELP@{HELP}}
-\index{HELP@{HELP}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
-\doxysubsubsection{\texorpdfstring{HELP}{HELP}}
-{\footnotesize\ttfamily const char HELP\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}}
+\mbox{\Hypertarget{need__test__to__do_8h_a4bdb82b5f72caf3342eb226cea7eddcf}\label{need__test__to__do_8h_a4bdb82b5f72caf3342eb226cea7eddcf}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!OPTION\_HELP@{OPTION\_HELP}}
+\index{OPTION\_HELP@{OPTION\_HELP}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_HELP}{OPTION\_HELP}}
+{\footnotesize\ttfamily const char OPTION\+\_\+\+HELP\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/help\char`\"{}}
 
 
 
 Pointer to string \char`\"{}-\/-\/help\char`\"{}. 
 
-This string is passed in arguments of function main(). When the help pointer is an argument of the main() function, the program show what commands user can enter. \mbox{\Hypertarget{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}\label{need__test__to__do_8h_a9c8c9c83bfa20f55d0c10ba668f57b98}} 
-\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!UNITTEST@{UNITTEST}}
-\index{UNITTEST@{UNITTEST}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
-\doxysubsubsection{\texorpdfstring{UNITTEST}{UNITTEST}}
-{\footnotesize\ttfamily const char UNITTEST\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}}
+This string is passed in arguments of function main(). When the help pointer is an argument of the main() function, the program show what commands user can enter. \mbox{\Hypertarget{need__test__to__do_8h_a3b2b3a65db6bc1d07bad257fc95f0def}\label{need__test__to__do_8h_a3b2b3a65db6bc1d07bad257fc95f0def}} 
+\index{need\_test\_to\_do.h@{need\_test\_to\_do.h}!OPTION\_UNITTEST@{OPTION\_UNITTEST}}
+\index{OPTION\_UNITTEST@{OPTION\_UNITTEST}!need\_test\_to\_do.h@{need\_test\_to\_do.h}}
+\doxysubsubsection{\texorpdfstring{OPTION\_UNITTEST}{OPTION\_UNITTEST}}
+{\footnotesize\ttfamily const char OPTION\+\_\+\+UNITTEST\mbox{[}$\,$\mbox{]} = \char`\"{}-\/-\/unit\+\_\+test\char`\"{}}
 
 
 

@@ -41,22 +41,22 @@ int CheckCorrectnessOfSolve(const SquareTrinomialCoef *correct_trinomial,
     switch(correct_root->number)
     {
         case NO_ROOTS:
-            printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
+            printf("%s OK\n%s", ESCGREEN, ESCDEFAULT);
             return 1;
 
         case INFINITE_ROOTS_QUANTITY:
-            printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
+            printf("%s OK\n%s", ESCGREEN, ESCDEFAULT);
             return 1;
 
         case ONE_ROOT:
             if (CompareDouble(test_root.first, correct_root->first))
             {
-                printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
+                printf("%s OK\n%s", ESCGREEN, ESCDEFAULT);
                 return 1;
             } else {
                  printf("%s FAILED!\n"
                         "EXPECTED: root = %lg\n"
-                        "RECEIVED: count of roots = %lg\n %s",
+                        "RECEIVED: count of roots = %lg\n%s",
                         ESCRED, correct_root->first,
                         test_root.first, ESCDEFAULT);
 
@@ -69,12 +69,12 @@ int CheckCorrectnessOfSolve(const SquareTrinomialCoef *correct_trinomial,
             if (CompareDouble(test_root.first,  correct_root->first) &&
                 CompareDouble(test_root.second, correct_root->second))
             {
-                printf("%s OK\n %s", ESCGREEN, ESCDEFAULT);
+                printf("%s OK\n%s", ESCGREEN, ESCDEFAULT);
                 return 1;
             } else {
                  printf("%s FAILED!\n"
                         "EXPECTED: root1 = %lg and root2 = %lg\n"
-                        "RECEIVED: root1 = %lg and root2 = %lg\n %s",
+                        "RECEIVED: root1 = %lg and root2 = %lg\n%s",
                         ESCRED, correct_root->first, correct_root->second,
                         test_root.first, test_root.second, ESCDEFAULT);
 
